@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23082C4F'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23C9A227' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<title>ZIYAN ZHAO · Technical Product Business Development</title>
+<style>
+:root{
+  --navy:#0A2240; --deep:#061629; --navy2:#123A63; --blue:#1B4F8C;
+  --steel:#2E6BA8; --gold:#C9A961; --ink:#16233A;
+  --muted:#64748B; --line:#DCE4EF; --soft:#F2F6FB; --white:#FFFFFF;
+  --serif:Georgia,"Songti SC","Source Han Serif SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 40px}
+
+nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(10px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-size:16px;color:var(--navy);letter-spacing:.02em}
+.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:24px}
+.navlinks a{font-size:12.5px;color:var(--muted);text-decoration:none;letter-spacing:.05em;transition:color .2s;padding:3px 0;border-bottom:1px solid transparent}
+.navlinks a:hover{color:var(--navy)}
+.navlinks a.on{color:var(--navy);border-bottom-color:var(--gold)}
+
+.hero{background:linear-gradient(155deg,#08203C 0%,#0E3560 55%,#134A80 100%);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.hero:before{content:"";position:absolute;right:-40px;top:40px;width:340px;height:340px;border:1px solid rgba(255,255,255,.06);border-radius:50%}
+.hero .wrap{position:relative;z-index:2;padding-top:30px;padding-bottom:18px}
+.hero .wrap.heroflex{display:flex;align-items:center;gap:44px;flex-wrap:wrap}
+.heromain{flex:1 1 430px;min-width:0}
+.portrait{flex:0 0 auto;width:170px;align-self:flex-end;position:relative}
+.portrait img{display:block;width:100%}
+.metrics{width:100%}
+.eyebrow{font-size:11.5px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+h1{font-family:var(--serif);font-size:48px;line-height:1.22;color:#fff;font-weight:400;letter-spacing:.01em}
+h1 em{font-style:normal;color:#9CC1E8}
+.tagline{margin-top:14px;font-size:16px;color:rgba(255,255,255,.76);max-width:700px;line-height:1.62}
+.tagline span{display:block;margin-top:8px}
+.tagline .tlcase{color:rgba(255,255,255,.93);font-size:16.5px;line-height:1.8}
+.mdlogo{cursor:zoom-in}
+.tagline .tllife{color:rgba(255,255,255,.55);font-size:14.5px;letter-spacing:.02em}
+.tagline .tlchain{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:9px}
+.tagline .tlchain .ch{display:flex;align-items:center;gap:8px;margin-top:0}
+.tagline .tlchain .ar{display:inline;margin-top:0}
+.tlchain .chlg{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:3px;width:60px;height:26px;padding:4px 7px;flex-shrink:0}
+.tlchain .chlg img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.tlchain b{font-size:15px;color:rgba(255,255,255,.94);font-weight:500;letter-spacing:.02em}
+.tlchain .ar{color:rgba(255,255,255,.42);font-size:13px}
+.tagline b{color:#fff;font-weight:500}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);margin-top:18px}
+.metric{background:rgba(6,22,41,.55);padding:14px 16px;backdrop-filter:blur(2px)}
+.metric .n{font-family:var(--serif);font-size:28px;color:#fff;line-height:1.1}
+.metric .n small{font-size:14px;color:#9CC1E8}
+.metric .l{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:5px;letter-spacing:.02em}
+.rolebar{margin-top:16px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);padding:12px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rolebar .q{font-size:13px;color:#fff;letter-spacing:.02em}
+.chip{font-size:12.5px;padding:6px 15px;border:1px solid rgba(255,255,255,.28);color:#fff;cursor:pointer;border-radius:2px;transition:all .18s;background:transparent}
+.chip:hover{border-color:#9CC1E8;background:rgba(255,255,255,.08)}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#08203C}
+.rolehint{margin-top:10px;font-size:13px;color:rgba(255,255,255,.7);min-height:22px}
+.rolehint b{color:var(--gold);font-weight:500}
+
+section{padding:50px 0}
+#experience{padding-top:22px}
+section.tinted{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+.secnum{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.1em}
+.sechead h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--navy)}
+.sechead .en{font-size:11.5px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+.secsub{font-size:13.5px;color:var(--muted);max-width:740px;margin-bottom:28px;line-height:1.8}
+
+.about{font-size:15px;color:#2C3B52;max-width:780px;line-height:1.95}
+.about p{margin-bottom:16px}
+.about b{color:var(--navy);font-weight:500}
+.tools{margin-top:34px;display:flex;flex-wrap:wrap;gap:8px}
+.tools .chip{border-color:var(--line);color:var(--navy);background:var(--white)}
+.tools .chip:hover{border-color:var(--steel);background:var(--soft)}
+.toolgrp{font-size:11.5px;letter-spacing:.1em;color:var(--gold);margin:26px 0 10px}
+
+.capviz{display:grid;grid-template-columns:520px 1fr;gap:28px;align-items:start}
+.radarbox,.capside{border:1px solid var(--line);background:var(--white)}
+.radarbox{padding:16px 16px 12px}
+.rboxtitle{font-size:10.5px;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+.radarbox svg{width:100%;height:auto;display:block;overflow:visible}
+.axlabel{font-size:11.5px;fill:#16233A;cursor:pointer}
+.axlabel.on{fill:#C9A961;font-weight:600}
+.axval{font-size:10.5px;fill:#8496AE;font-family:var(--serif)}
+.axval.on{fill:#C9A961;font-weight:700}
+.axhit{cursor:pointer;fill:transparent}
+.capside{padding:24px 24px;min-height:322px}
+.cside-sh{font-size:10.5px;letter-spacing:.14em;color:var(--gold)}
+.capside h4{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--navy);margin:8px 0 3px}
+.capside .cen{font-size:10.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.capside .csc{display:flex;gap:34px;margin:16px 0 14px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.capside .csc .n{font-family:var(--serif);font-size:26px;color:var(--navy);line-height:1;display:block}
+.capside .csc .n small{font-size:13px;color:var(--muted)}
+.capside .csc .l{font-size:11px;color:var(--muted);margin-top:6px;display:block}
+.capside .csc .up .n{color:var(--gold)}
+.capside .cdef{font-size:13.5px;color:#2C3B52;line-height:1.9}
+.capside .cev{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:12.5px;color:#4A5A72;line-height:1.85}
+.capside .cev b{color:var(--navy);font-weight:500}
+.capside .cup{margin-top:14px;padding:12px 14px;background:#FAFBFD;border-left:3px solid var(--gold);font-size:12.5px;color:#4A5A72;line-height:1.9}
+.capside .cup b{color:var(--navy);font-weight:500}
+.capside .cgap{margin-top:14px;padding:12px 14px;background:#FDF8F1;border-left:3px solid #C9A961;font-size:12.5px;color:#5A4A32;line-height:1.9}
+.capside .cgap b{color:#8A6D00;font-weight:500}
+.capside .chint{font-size:13px;color:var(--muted);line-height:1.9}
+.capside .clist{margin-top:14px;font-size:12.5px;color:#4A5A72;line-height:1.9}
+.capside .clist span{color:var(--gold);margin-right:8px;font-family:var(--serif)}
+
+.mx{overflow-x:auto}
+.mxscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mxtable{width:100%;min-width:640px;border-collapse:separate;border-spacing:4px}
+.mxtable th{font-size:11.5px;color:var(--muted);font-weight:400;padding:4px 2px 8px;text-align:center;letter-spacing:.03em}
+.mxtable th.rh{text-align:left;color:var(--navy);font-size:12.5px;width:118px;white-space:nowrap;padding-bottom:8px}
+.mxtable td{height:38px;text-align:center;font-size:11.5px;border-radius:2px;cursor:pointer;transition:box-shadow .15s,transform .12s}
+.mxtable td.l0{background:#F4F7FB;color:#B5C3D6}
+.mxtable td.l1{background:#DCE8F6;color:#54759B}
+.mxtable td.l2{background:#7FA8D4;color:#fff}
+.mxtable td.l3{background:#123A63;color:#fff}
+.mxtable td:hover{box-shadow:0 0 0 2px var(--gold);transform:scale(1.04)}
+.mxtable td.sel{box-shadow:0 0 0 2px var(--gold)}
+.mxtip{margin-top:18px;border-left:2px solid var(--gold);padding:6px 0 6px 18px;font-size:13.5px;color:#2C3B52;line-height:1.8;min-height:48px}
+.mxtip .em{display:block;margin-top:5px;font-size:12px;color:var(--muted)}
+.mxscale{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--muted)}
+.mxscale i{display:inline-block;width:20px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+.capgrid{display:grid;grid-template-columns:224px 1fr;gap:34px}
+.caps{display:flex;flex-direction:column;gap:8px}
+.capitem{border:1px solid var(--line);padding:12px 14px;cursor:pointer;transition:all .2s;background:var(--white)}
+.capitem .t{font-size:14px;color:var(--navy)}
+.capitem .e{font-size:10.5px;color:var(--muted);letter-spacing:.07em;margin-top:3px}
+.capitem:hover{border-color:var(--steel)}
+.capitem.on{background:var(--navy);border-color:var(--navy)}
+.capitem.on .t{color:#fff}
+.capitem.on .e{color:#9CC1E8}
+.capitem.off{opacity:.3}
+.expgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-content:start}
+.expcard{border:1px solid var(--line);padding:14px;cursor:pointer;transition:all .2s;background:var(--white);display:flex;gap:12px;align-items:center}
+.expcard .lg,.tlhead .lg{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:3px;width:118px;height:44px;padding:6px;flex-shrink:0}
+.expcard .lg svg,.tlhead .lg svg{width:100%;height:100%}
+.expcard .lg img,.tlhead .lg img{max-width:100%;max-height:100%;object-fit:contain}
+.lg.lgmd{width:152px;height:56px;padding:3px}
+.lgcap{font-size:9.5px;color:var(--muted);letter-spacing:.1em;text-align:center;width:152px}
+.lgwrap{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.livestrip{display:flex;gap:4px}
+.livestrip img{flex:1 1 0;min-width:0;height:88px;object-fit:contain;border-radius:2px;border:1px solid var(--line);cursor:zoom-in;transition:transform .15s,border-color .15s;background:#fff}
+.livestrip img:hover{transform:scale(1.06);border-color:var(--gold)}
+#lbox{position:fixed;inset:0;background:rgba(10,25,47,.88);display:none;align-items:center;justify-content:center;z-index:999;cursor:zoom-out;flex-direction:column;gap:14px;padding:40px}
+#lbox.on{display:flex}
+#lbox img{max-width:min(820px,86vw);max-height:74vh;border-radius:4px;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+#lbox .cap{color:rgba(255,255,255,.85);font-size:14px;letter-spacing:.5px}
+.expcard .t{font-size:14px;color:var(--navy);font-weight:500}
+.expcard .d{font-size:11.5px;color:var(--muted);margin-top:2px}
+.expcard:hover{border-color:var(--steel)}
+.expcard.on{background:#E8F0FA;border-color:var(--steel);box-shadow:inset 3px 0 0 var(--navy)}
+.expcard.off{opacity:.3}
+.evidence{margin-top:26px;border-left:2px solid var(--gold);padding:4px 0 4px 20px;min-height:64px}
+.evidence .eh{font-size:11.5px;color:var(--gold);letter-spacing:.12em;margin-bottom:10px}
+.evidence ul{list-style:none}
+.evidence li{font-size:13.5px;color:#2C3B52;margin-bottom:7px;padding-left:15px;position:relative;line-height:1.75}
+.evidence li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:1px;background:var(--gold)}
+.evidence .empty{font-size:13px;color:var(--muted)}
+
+.tlgroup{margin-bottom:12px}
+.tlghead{display:flex;align-items:baseline;gap:12px;padding:0 0 9px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.tlghead .zh{font-family:var(--serif);font-size:17px;color:var(--navy);letter-spacing:.03em}
+.tlghead .zh:before{content:"";display:inline-block;width:16px;height:2px;background:var(--gold);vertical-align:5px;margin-right:10px}
+.tlghead .en{font-size:10.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.tlghead .ct{margin-left:auto;font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+.tl{position:relative;padding-left:28px}
+.tl:before{content:"";position:absolute;left:6px;top:10px;bottom:10px;width:1px;background:var(--line)}
+.tlitem{position:relative;margin-bottom:14px}
+.tlitem:before{content:"";position:absolute;left:-26px;top:26px;width:9px;height:9px;border-radius:50%;background:var(--white);border:2px solid var(--steel)}
+.tlitem.hl:before{background:var(--gold);border-color:var(--gold)}
+.tlhead{border:1px solid var(--line);padding:18px 20px;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto auto;gap:18px;align-items:center;transition:background .2s,border-color .2s;background:var(--white)}
+.tlhead:hover{background:#F7FAFD;border-color:var(--steel)}
+.tlhead.open{background:#F7FAFD;border-color:var(--steel)}
+.tlhead .ttl{font-size:16px;color:var(--navy);font-weight:500}
+.tlhead .meta{font-size:12px;color:var(--muted);margin-top:4px}
+.tlhead .hook{font-size:13px;color:var(--blue);margin-top:8px;line-height:1.6}
+.tlhead .hook:before{content:"";display:inline-block;width:14px;height:1px;background:var(--gold);vertical-align:4px;margin-right:8px}
+.minik{display:flex;gap:20px}
+.minik div{text-align:right}
+.minik b{font-family:var(--serif);font-size:20px;color:var(--navy);font-weight:400;display:block;line-height:1.1}
+.minik span{font-size:11px;color:var(--muted)}
+.arrow{font-size:12px;color:var(--muted);transition:transform .2s}
+.tlhead.open .arrow{transform:rotate(90deg);color:var(--navy)}
+.tlbody{display:none;border:1px solid var(--line);border-top:none;padding:22px 20px;background:var(--white)}
+.tlbody.open{display:block}
+.sar{display:grid;grid-template-columns:78px 1fr;gap:12px 16px;font-size:13.5px;line-height:1.85}
+.sar .k{font-size:11.5px;color:var(--gold);letter-spacing:.08em;padding-top:4px}
+.sar .v{color:#2C3B52}
+.kpi{display:flex;gap:30px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.kpi div{font-size:12px;color:var(--muted)}
+.kpi b{font-family:var(--serif);font-size:21px;color:var(--navy);font-weight:400;display:block;margin-bottom:2px}
+.casetag{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:#fff;background:var(--gold);padding:3px 9px;margin-left:10px;vertical-align:3px}
+.casehl{border:1px solid var(--gold);background:linear-gradient(180deg,#FFFDF7 0%,#FFFFFF 100%)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border-top:3px solid var(--navy);background:var(--white);padding:22px 20px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step .no{font-family:var(--serif);font-size:26px;color:#C8D6E8;line-height:1}
+.step h3{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--navy);margin:10px 0 4px}
+.step .en{font-size:10.5px;letter-spacing:.12em;color:var(--gold);margin-bottom:12px}
+.step p{font-size:13px;color:#2C3B52;line-height:1.8}
+.step .eg{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--muted);line-height:1.75}
+.step .eg b{color:var(--blue);font-weight:500}
+
+.kg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+.kgc{border:1px solid var(--line);padding:18px;background:var(--white);border-top:2px solid var(--navy)}
+.kgc .n{font-family:var(--serif);font-size:25px;color:var(--navy)}
+.kgc .l{font-size:11.5px;color:var(--muted);margin-top:6px}
+.switch{display:flex;gap:8px;margin-bottom:22px}
+.switch .chip{border-color:var(--line);color:var(--navy);background:var(--white)}
+.switch .chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar{display:grid;grid-template-columns:132px 1fr 80px;align-items:center;gap:14px;font-size:13px;color:#2C3B52}
+.bar .track{height:22px;background:#E4ECF6;position:relative}
+.bar .fill{height:100%;background:linear-gradient(90deg,#123A63,#2E6BA8);transition:width .5s ease}
+.bar .fill.g{background:linear-gradient(90deg,#1B4F8C,#5B93CB)}
+.bar .val{text-align:right;font-family:var(--serif);color:var(--navy);font-size:16px}
+.note{font-size:12px;color:var(--muted);margin-top:18px}
+
+.subhead{display:flex;align-items:baseline;gap:12px;padding:0 0 12px;border-bottom:1px solid var(--line);margin:44px 0 20px}
+.subhead .zh{font-family:var(--serif);font-size:17px;color:var(--navy);letter-spacing:.03em}
+.subhead .zh:before{content:"";display:inline-block;width:16px;height:2px;background:var(--gold);vertical-align:5px;margin-right:10px}
+.subhead .en{font-size:10.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.subhead .ct{margin-left:auto;font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+
+.hlgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.hlc{border:1px solid var(--line);background:var(--white);padding:16px 18px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,box-shadow .2s}
+.hlc:hover{border-color:var(--steel);box-shadow:0 2px 10px rgba(10,34,64,.06)}
+.hlc .rk{flex-shrink:0;width:30px;height:30px;border-radius:3px;background:var(--soft);color:var(--navy);font-family:var(--serif);font-size:13px;display:flex;align-items:center;justify-content:center}
+.hlc .tt{font-size:14px;color:var(--navy);font-weight:500;line-height:1.55}
+.hlc .dt{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.03em}
+.hlc .nums{display:flex;gap:12px;font-size:11.5px;color:var(--muted);margin-top:7px}
+.hlc .nums b{color:var(--navy);font-weight:500;font-family:var(--serif);font-size:13px}
+.hlc .bd{flex:1;min-width:0}
+.hlc .thumb{flex-shrink:0;width:78px;height:78px;border:1px solid var(--line);background:var(--soft);overflow:hidden}
+.hlc .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.hlc .why{font-size:12.5px;color:#4A5A72;line-height:1.7;margin-top:9px;padding-top:9px;border-top:1px dashed var(--line)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.shots figure{margin:0;background:#fff;border:1px solid var(--line);border-top:2px solid var(--ac,#1B3A6B);border-radius:3px;overflow:hidden;transition:box-shadow .18s,transform .18s}
+.shots figure:hover{box-shadow:0 8px 22px rgba(15,32,64,.12);transform:translateY(-2px)}
+.shots img{width:100%;height:210px;object-fit:contain;display:block;background:var(--act,#F2F5FA);cursor:zoom-in}
+.shots figcaption{font-size:11px;color:var(--ac,#4A5A72);line-height:1.55;padding:9px 11px 10px;letter-spacing:.02em;border-top:1px solid var(--line)}
+
+.voices{display:flex;flex-direction:column;gap:14px}
+.voc{border-left:2px solid var(--gold);background:var(--white);padding:18px 22px}
+.voc .q{font-family:var(--serif);font-size:15.5px;line-height:1.85;color:var(--navy)}
+.voc .cm{font-size:12.5px;color:#4A5A72;margin-top:10px;line-height:1.7}
+.voc .src{font-size:11px;color:var(--muted);margin-top:8px;letter-spacing:.03em}
+
+.askbox{border:1px solid var(--line);padding:26px;background:var(--white);border-top:2px solid var(--navy)}
+.askrow{display:flex;gap:10px}
+.askrow input{flex:1;padding:12px 14px;border:1px solid var(--line);font-size:14px;font-family:var(--sans);background:var(--white);outline:none;color:var(--ink)}
+.askrow input:focus{border-color:var(--steel)}
+.askrow button{padding:12px 24px;background:var(--navy);color:#fff;border:none;font-size:13.5px;cursor:pointer;font-family:var(--sans);letter-spacing:.05em;transition:background .2s}
+.askrow button:hover{background:var(--navy2)}
+.sugg{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.sugg .chip{border-color:var(--line);color:var(--navy);background:var(--white)}
+.sugg .chip:hover{border-color:var(--steel);background:var(--soft)}
+.answer{margin-top:22px;border-left:2px solid var(--navy);padding:2px 0 2px 20px;font-size:14px;line-height:1.9;color:#2C3B52;display:none}
+.answer .src{font-size:11.5px;color:var(--muted);margin-top:12px;letter-spacing:.03em}
+.answer b{color:var(--navy);font-weight:500}
+
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact div{border-top:2px solid var(--navy);padding-top:13px}
+.contact .k{font-size:11px;color:var(--muted);letter-spacing:.1em}
+.contact .v{font-size:14px;color:var(--navy);margin-top:6px;word-break:break-all}
+
+footer{background:var(--deep);color:rgba(255,255,255,.6);padding:28px 0 40px;font-size:12px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media(max-width:880px){
+  .wrap{padding:0 22px}
+  h1{font-size:33px}
+  .metrics,.kg{grid-template-columns:repeat(2,1fr)}
+  .metrics .metric:last-child{grid-column:span 2}
+  .portrait{width:136px;margin:0 auto;align-self:center}
+  .heromain{flex:1 1 100%}
+  .capgrid{grid-template-columns:1fr}
+  .capviz{grid-template-columns:1fr}
+  .capviz>*,.capgrid>*,.caps{min-width:0}
+  .capitem .e{word-break:break-word}
+  .expgrid{grid-template-columns:repeat(2,1fr)}
+  .expgrid>*,.steps>*,.hlgrid>*,.contact>*,.shots>*{min-width:0}
+  .steps{grid-template-columns:1fr}
+  .hlgrid{grid-template-columns:1fr}
+  .shots{grid-template-columns:repeat(2,1fr)}
+  .shots img{height:170px}
+  .contact{grid-template-columns:1fr}
+  .tlhead{grid-template-columns:auto 1fr;gap:14px}
+  .minik{grid-column:1/-1;justify-content:flex-start}
+  .minik div{text-align:left}
+  .arrow{display:none}
+  .navlinks{gap:13px}
+  .navlinks a{font-size:11px}
+}
+@media(max-width:640px){
+  .expgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand">ZIYAN ZHAO <span>·</span> Technical Product BD</div>
+  <div class="navlinks">
+    <a href="#experience" class="nl">Experience</a>
+    <a href="#capability" class="nl">Capabilities</a>
+    <a href="#approach" class="nl">Approach</a>
+    <a href="#media" class="nl">Writing</a>
+    <a href="#overview" class="nl">Profile</a>
+    <a href="#assistant" class="nl">Ask AI</a>
+    <a href="#contact" class="nl">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap heroflex">
+  <div class="heromain">
+  <h1>Stay Empty, <em>Keep Pushing</em></h1>
+  <p class="tagline">
+    <span>Undergraduate scholarships RMB 100K+ · MSc admits: LSE / LBS / NUS / Duke</span>
+    <span class="tlchain">
+      <span class="ch"><span class="chlg"><img src="assets/ey.png" alt="EY"></span><b>EY Consulting</b></span>
+      <span class="ar">→</span>
+      <span class="ch"><span class="chlg"><img src="assets/jd.png" alt="JD"></span><b>JD E-commerce</b></span>
+      <span class="ar">→</span>
+      <span class="ch"><span class="chlg"><img src="assets/tencent.png" alt="Tencent Cloud"></span><b>Tencent Cloud &amp; AI</b></span>
+    </span>
+    <span class="tllife">Resilient under pressure, quick to learn · Years of living and working abroad and across cities · Used to growing through hard things</span>
+  </p>
+</div>
+  <div class="portrait"><img src="assets/portrait-baked.png" alt="Ziyan Zhao · Professional portrait"></div>
+  <div class="metrics">
+    <div class="metric"><div class="n">1<small> / 312</small></div><div class="l">Ranked 1st of 312 · Two-year cohort, undergraduate</div></div>
+    <div class="metric"><div class="n">4<small> roles</small></div><div class="l">Venture &amp; leading-company internships</div></div>
+    <div class="metric"><div class="n">7.5<small> IELTS</small></div><div class="l">First attempt · Speaking 7.0 · Listening &amp; Reading 8.5</div></div>
+    <div class="metric"><div class="n">RMB 2M<small>+</small></div><div class="l">Tencent · Est. annual consumption, self-sourced</div></div>
+  </div>
+  <div class="rolebar">
+    <div class="q">Who are you?</div>
+    <div class="opts" style="display:flex;gap:8px;flex-wrap:wrap">
+      <div class="chip" data-role="hr">Recruiter</div>
+      <div class="chip" data-role="panel">Panel judge</div>
+      <div class="chip" data-role="peer">Peer / Friend</div>
+    </div>
+  </div>
+  <div class="rolehint" id="rolehint">Pick who you are, and I'll reorganise everything below around what you care about.</div>
+</div></header>
+
+<section id="experience"><div class="wrap">
+  <div class="sechead"><span class="secnum">01</span><h2>Experience in Depth</h2><span class="en">Experience</span></div>
+  <div class="tlgroup">
+    <div class="tlghead"><span class="zh">Education</span><span class="en">Education</span><span class="ct">2 schools · MSc / BSc</span></div>
+    <div class="tl" id="tledu"></div>
+  </div>
+  <div class="tlgroup">
+    <div class="tlghead"><span class="zh">Professional</span><span class="en">Professional</span><span class="ct">4 roles · Consulting / E-commerce / Cloud / Venture</span></div>
+    <div class="tl" id="tlpro"></div>
+  </div>
+</div></section>
+
+<section id="capability" class="tinted"><div class="wrap">
+  <div class="sechead"><span class="secnum">02</span><h2>Capability Map</h2><span class="en">Capabilities</span></div>
+  <p class="secsub">Six capabilities, each tied to one fact: Learning — I entered university with the lowest admission score of my province in that year, and ranked 1st of 312 two years later; English — IELTS 7.5; Resilience — self-sourcing accounts, working independently across Beijing, Shanghai, Hong Kong, Shenzhen and overseas; AI — I built this site and my automation workflows myself; Data — turning "who do we hit first" into a ranked list; Technical depth — non-technical background, still learning.</p>
+  <div class="capviz">
+    <div class="radarbox">
+      <div class="rboxtitle">CAPABILITY RADAR</div>
+      <svg id="radar" viewBox="0 0 520 372"></svg>
+    </div>
+    <div class="capside" id="capside"></div>
+  </div>
+
+  <div class="subhead"><span class="zh">Capability × Experience Matrix</span><span class="en">Capability × Experience Matrix</span><span class="ct">6 × 6 · Shade = strength of evidence</span></div>
+  <div class="mx">
+    <div class="mxscroll"><table class="mxtable" id="mxtable"></table></div>
+    <div class="mxscale">
+      <span>Strength of evidence</span>
+      <span><i style="background:#123A63"></i>Strong · core evidence sits here</span>
+      <span><i style="background:#7FA8D4"></i>Medium · clear outcome</span>
+      <span><i style="background:#DCE8F6"></i>Weak · touched on</span>
+      <span><i style="background:#F4F7FB"></i>No direct evidence</span>
+    </div>
+    <div class="mxtip" id="mxtip">Hover any cell: this shows what that experience actually did for that capability.<span class="em">Click a cell to select that capability and expand the matching experience.</span></div>
+  </div>
+
+  <div class="subhead"><span class="zh">Capability ↔ Experience Index</span><span class="en">Two-way Index</span><span class="ct">By capability / by experience</span></div>
+  <div class="capgrid">
+    <div class="caps" id="caps"></div>
+    <div class="expgrid" id="exps"></div>
+  </div>
+  <div class="evidence" id="evidence">
+    <div class="eh">EVIDENCE · HARD FACTS</div>
+    <div class="empty">Select a capability or an experience, and its hard evidence appears here.</div>
+  </div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+  <div class="sechead"><span class="secnum">03</span><h2>How I Work</h2><span class="en">Approach</span></div>
+  <p class="secsub">A three-step way of working, where every step carries a real project I actually ran — not a methodology template, but the order in which I genuinely work.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="no">01</div>
+      <h3>Read the signal: form the hypothesis first</h3>
+      <div class="en">READ THE SIGNAL</div>
+      <p>Work backwards from policy, industry cycles and competitor moves to the pressure the client is bound to run into, and set the hypothesis before the client has noticed it themselves. A visit without a hypothesis is just a chat — it never surfaces the real need.</p>
+      <div class="eg"><b>Example:</b> New disclosure rules from China's three major exchanges → clients' ESG rating needs (EY: an 80-page service proposal plus three rounds of client visits); everyone chasing AI short dramas → I judged that feature-length AI film demands far more on quality and spend per project, so I targeted studios doing high-quality short dramas and AI films (Tencent Cloud).</div>
+    </div>
+    <div class="step">
+      <div class="no">02</div>
+      <h3>Validate in the field: pressure-test the hypothesis</h3>
+      <div class="en">TEST ON SITE</div>
+      <p>A hypothesis is not a requirement. Use repeated research and visits until the client admits this is their problem; at the same time convert qualitative gut feel into quantitative terms — otherwise you can neither quote nor prioritise.</p>
+      <div class="eg"><b>Example:</b> The Greater Bay Area tourism client took four rounds of research before we locked onto QA and live streaming; the AIGC client had quietly plugged in cheaper overseas models, so price comparison was a losing game → I found the one problem only we could solve: unified billing across models.</div>
+    </div>
+    <div class="step">
+      <div class="no">03</div>
+      <h3>Translate it into something buyable, then push it to real consumption</h3>
+      <div class="en">TRANSLATE &amp; CLOSE</div>
+      <p>Pin down technical requirements with architects and pre-sales, organise POCs and competitive benchmarks, choose the commercial path, then drive it all the way to actual consumption — and follow through on contract, settlement and invoicing.</p>
+      <div class="eg"><b>Example:</b> The AIGC film client completed Token Hub onboarding and moved into post-paid consumption; on the ByteDance Volcano Cloud migration, management accepted "optimise the existing estate first, discount second".</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="media" class="tinted"><div class="wrap">
+  <div class="sechead"><span class="secnum">04</span><h2>Writing &amp; Venture</h2><span class="en">Self-media &amp; Venture</span></div>
+  <p class="secsub">On RED (Xiaohongshu), "Capybara" published 24 posts (2024.03 – 2026.07), with a verified total of 10,195 likes, 3,008 saves, 1,704 comments, 1,793 shares and 2,671 followers. In parallel, as a partner at Backwards Studio, I ran the full loop from content to leads to signed contracts to delivery.</p>
+  <div class="kg">
+    <div class="kgc"><div class="n">24<small> posts</small></div><div class="l">RED notes (verified by scraping)</div></div>
+    <div class="kgc"><div class="n">10,195</div><div class="l">Total likes on RED</div></div>
+    <div class="kgc"><div class="n">1,704</div><div class="l">Total comments on RED</div></div>
+    <div class="kgc"><div class="n">RMB 70K+</div><div class="l">Studio profit to date</div></div>
+  </div>
+  <div class="switch">
+    <div class="chip on" data-view="xhs">RED (verified)</div>
+    <div class="chip" data-view="impact">All platforms</div>
+    <div class="chip" data-view="biz">Commercial conversion</div>
+  </div>
+  <div class="bars" id="bars"></div>
+  <p class="note">Notes on the numbers: "RED (verified)" is live data scraped post by post on 2026.09.20 across 24 notes; "All platforms" covers RED plus on-campus platforms for 2024.09–2025.09 (including estimated reach); "Commercial conversion" covers signed study-abroad service contracts and offline tutoring. Bar widths are indicative within each group — read the values on the right.</p>
+
+  <div class="subhead"><span class="zh">Selected Notes</span><span class="en">Selected Notes</span><span class="ct">8 posts · ranked by performance</span></div>
+  <div class="hlgrid" id="hlgrid"></div>
+
+  <div class="subhead"><span class="zh">In My Own Words</span><span class="en">In My Own Words</span><span class="ct">Verbatim quotes</span></div>
+  <div class="voices" id="voices"></div>
+</div></section>
+
+<section id="overview"><div class="wrap">
+  <div class="sechead"><span class="secnum">05</span><h2>Profile</h2><span class="en">Profile</span></div>
+  <p class="secsub">Everything above is what I have done. This section is who I am: where I started, the few decisions that mattered, and the tools in my hands.</p>
+  <div class="about">
+    <p>I'm Ziyan Zhao. In the year I entered university I had the lowest provincial entrance score of that intake; my English couldn't keep up and I needed translation software just to follow lectures — that was my starting point. Four years later I graduated in Economics from the University of Nottingham Ningbo China: GPA 3.8/4.0, <b>ranked 1st of 312 in my cohort for two consecutive years</b>, UK First-Class Honours, outstanding graduate. Along the way I ranked first university-wide to win a <b>full-tuition exchange at the University of Birmingham</b>, and took about RMB 100K in undergraduate scholarships, becoming one of the faces of the university's marketing.</p>
+    <p>For my master's I read Management at the London School of Economics (LSE), with concurrent admits from LBS, NUS and Duke, and a postgraduate scholarship of RMB 80K. I chose on screening cost, not ranking: inside China, LBS has limited recognition outside top-tier finance and consulting, and with a Sino-foreign joint-venture undergraduate degree I needed a school name that required no extra explanation.</p>
+    <p>Professionally I've walked three paths: EY sustainability strategy consulting (Shanghai and Beijing offices, 9 months), JD Retail e-commerce operations and buying (Beijing HQ), and Tencent Cloud technical product business development trainee (Shenzhen HQ, current). All three share one thing — <b>they are the same job: dig the real requirement out of messy information, then drive it into reality.</b></p>
+    <p>AI isn't a side interest, it's how I work. At JD I built automated workflows with JoyClaw AI and raised data extraction and analysis efficiency by over 60%. At Tencent Cloud I sell AI itself — <b>working the full chain from reading the market to validating with data to finding the right person to uncovering the need, I independently sourced and closed an AIGC film studio</b>, then drove it through Token Hub onboarding into post-paid consumption. The accounts I sourced independently total an estimated RMB 2M+ in annual consumption (basis: extrapolated from current call volume and purchase intent, not a quote).</p>
+  </div>
+  <div class="toolgrp">AI &amp; AUTOMATION</div>
+  <div class="tools">
+    <div class="chip">Workbuddy</div><div class="chip">Codex</div><div class="chip">AI Agent workflows</div>
+    <div class="chip">Prompt Engineering</div><div class="chip">Gamma</div><div class="chip">NotebookLM</div><div class="chip">JD JoyClaw AI</div>
+  </div>
+  <div class="toolgrp">DATA &amp; ANALYSIS</div>
+  <div class="tools">
+    <div class="chip">Advanced Excel formulas / PivotTables</div><div class="chip">Stata</div><div class="chip">easyBI</div>
+    <div class="chip">GoldenEye (JD BI)</div><div class="chip">PPT &amp; data visualisation</div>
+  </div>
+  <div class="toolgrp">LANGUAGE &amp; CERTIFICATION</div>
+  <div class="tools">
+    <div class="chip">IELTS 7.5 (Speaking 7.0)</div><div class="chip">Full English-language work experience</div><div class="chip">Tencent Cloud Practitioner Certificate</div>
+  </div>
+</div></section>
+
+<section id="assistant" class="tinted"><div class="wrap">
+  <div class="sechead"><span class="secnum">06</span><h2>Ask AI · Anything</h2><span class="en">Ask me anything</span></div>
+  <p class="secsub">Behind this module sits a structured knowledge base about my experience, with keyword search.</p>
+  <div class="askbox">
+    <div class="askrow">
+      <input id="q" type="text" placeholder="e.g. How did the AIGC film project actually work?">
+      <button onclick="ask()">Ask</button>
+    </div>
+    <div class="sugg" id="sugg"></div>
+    <div class="answer" id="answer"></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="sechead"><span class="secnum">07</span><h2>Contact</h2><span class="en">Contact</span></div>
+  <p class="secsub">Feel free to push on any part of my experience — I can go deeper.</p>
+  <div class="contact">
+    <div><div class="k">PHONE / WECHAT</div><div class="v">18988401676</div></div>
+    <div><div class="k">EMAIL</div><div class="v">zzyzzy921921@outlook.com</div></div>
+    <div><div class="k">LINKEDIN</div><div class="v">linkedin.com/in/ziyan-zhao-4540ab283</div></div>
+  </div>
+  <div class="contact" style="margin-top:20px">
+    <div><div class="k">RED (XIAOHONGSHU)</div><div class="v">Capybara · RED ID 7795455099</div></div>
+    <div><div class="k">EDUCATION</div><div class="v">MSc Management, LSE · BSc Economics (First-Class Honours), UNNC</div></div>
+    <div><div class="k">LOCATION</div><div class="v">Shenzhen (Tencent Cloud HQ) · Open to travel</div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>Ziyan Zhao · Technical Product Business Development</div>
+  <div>Built end-to-end by me, including the interaction logic and the AI Q&amp;A module</div>
+</div></footer>
+
+<script>
+var LOGOS={
+ tc:'<img src="assets/tencent.png" alt="Tencent">',
+ jd:'<img src="assets/jd.png" alt="JD.com">',
+ ey:'<img src="assets/ey.png" alt="EY">',
+ lse:'<img src="assets/lse.png" alt="LSE">',
+ unc:'<img src="assets/unnc2.jpg" alt="University of Nottingham Ningbo China">',
+ md:'<img src="assets/xhs/xhs-profile.jpg" class="mdlogo" data-cap="RED profile · Capybara | 2,671 followers | 13K likes &amp; saves" alt="RED profile" title="RED profile · click to enlarge">',
+ edu:'<svg width="38" height="38" viewBox="0 0 40 40"><path d="M4 17 L20 9 L36 17 L20 25 Z" fill="#0A2240"/><path d="M30 19.5 V27 c0 2.5-4.5 4.5-10 4.5 s-10-2-10-4.5 v-7.5" stroke="#0A2240" stroke-width="1.6" fill="none"/></svg>'
+};
+
+var CAPS=[
+ {id:"learn",t:"Learning Agility",e:"LEARNING AGILITY"},
+ {id:"eng",t:"English &amp; Cross-cultural",e:"ENGLISH &amp; CROSS-CULTURAL"},
+ {id:"ai",t:"AI &amp; Tooling",e:"AI &amp; TOOLING"},
+ {id:"data",t:"Data Analysis &amp; Judgement",e:"DATA &amp; JUDGEMENT"},
+ {id:"resi",t:"Resilience &amp; Multi-track Delivery",e:"RESILIENCE &amp; MULTI-TRACK"},
+ {id:"tech",t:"Technical Depth",e:"TECHNICAL DEPTH"}
+];
+var EXPS=[
+ {id:"tc",t:"Tencent Cloud",d:"Technical product BD · Shenzhen",lg:"tc"},
+ {id:"jd",t:"JD.com",d:"E-commerce ops &amp; buying · Beijing",lg:"jd"},
+ {id:"ey",t:"EY",d:"Sustainability strategy · Shanghai &amp; Beijing",lg:"ey"},
+ {id:"md",t:"Content / Studio",d:"Partner · Business development",lg:"md"},
+ {id:"lse",t:"LSE",d:"MSc Management · London",lg:"lse"},
+ {id:"unc",t:"UNNC",d:"BSc Economics · Ningbo",lg:"unc"}
+];
+var MXCOLS=[{id:"tc",s:"Tencent"},{id:"jd",s:"JD"},{id:"ey",s:"EY"},{id:"md",s:"Studio"},{id:"lse",s:"LSE"},{id:"unc",s:"UNNC"}];
+var ACCENT={tc:["#0052D9","#EEF4FF"],jd:["#C8161D","#FDEEEF"],ey:["#8A6D00","#FBF6E6"],md:["#D4234A","#FDEDF0"],lse:["#6B2D6B","#F4EEF4"],unc:["#1E4E9C","#EDF2FB"]};
+var MATRIX={
+ learn:{unc:3,lse:2,ey:2,jd:2,tc:2,md:2},
+ eng:  {unc:3,lse:3,ey:3,jd:0,tc:2,md:1},
+ ai:   {unc:0,lse:1,ey:0,jd:3,tc:3,md:0},
+ data: {unc:1,lse:2,ey:2,jd:3,tc:3,md:2},
+ resi: {unc:3,lse:3,ey:3,jd:3,tc:3,md:2},
+ tech: {unc:0,lse:0,ey:0,jd:1,tc:2,md:0}
+};
+var MNOTE={
+ "learn|unc":"I entered with the lowest provincial admission score of that intake and needed translation software to follow lectures; two years later I was 1st of 312 — I never got there by stacking hours",
+ "learn|lse":"A fully English-taught master's; picked up the management and strategy analytical frameworks quickly",
+ "learn|ey":"Learned CDP, DJSI, EcoVadis and MSCI rating frameworks from zero, and could run client reports independently within nine months",
+ "learn|jd":"Learned GoldenEye, easyBI and the Tongtianta back-end from scratch within two weeks, then turned the category weekly report into an automated flow",
+ "learn|tc":"Self-taught the language of cloud and AI products (Token, GPU, Workbuddy) in two months; now able to size client volume independently",
+ "learn|md":"Learned content operations and conversion from zero: 24 posts brought 130+ leads, with topics and methods worked out by trial and error myself",
+ "eng|unc":"Fully English teaching environment; went on a tuition-waivered exchange to the University of Birmingham and joined local student societies",
+ "eng|lse":"Fully English master's programme; worked in teams with classmates from many countries on case analysis and presentations",
+ "eng|ey":"Completed CDP, DJSI, EcoVadis and MSCI ratings and wrote ESG reports entirely in English; sat in on senior interviews in energy and F&B and wrote up 17 sets of minutes",
+ "eng|tc":"Seven Tencent interview rounds including an AI English interview; on client sites I align architects, pre-sales and management, translating technical language into business language",
+ "eng|md":"Content aimed at international students and their parents, so English materials and English communication are everyday work",
+ "ai|jd":"Built automated workflows with JoyClaw AI for the footwear category weekly report; data extraction and analysis efficiency up over 60%",
+ "ai|tc":"I sell AI itself: independently identified Token and Workbuddy Enterprise demand and translated business scenarios into call volume; holds the Tencent Cloud Practitioner Certificate",
+ "ai|lse":"Used data analysis and AI tools to support coursework and case research",
+ "data|jd":"Weighted segmentation on two years of GMV, ad rates and outreach status to shortlist the Top 50 footwear merchants per region — turning 'who do we hit first' into a ranked list, tracked on a weekly dashboard",
+ "data|tc":"Validated the direction with industry reports first (AI film costs less than half of traditional film; a RMB 10M project carries roughly RMB 4M of Token spend), then converted the client's vague feel into a testable volume assumption; reached 15+ key stakeholders, developed and followed 25+ qualified opportunities, sizing each one",
+ "data|ey":"Sized cage-free egg suppliers and produced a 30-page feasibility report with analysis charts",
+ "data|lse":"Quantitative analysis and strategy case training within the master's programme",
+ "data|md":"Content is data-driven: the best single post reached 2,736 likes / 1,191 saves, built by reviewing topics and posting times",
+ "data|unc":"Economics training as the base: econometrics and statistics courses, English textbooks throughout",
+ "resi|ey":"Nine months across Shanghai and Beijing, running six clients' ESG reports, an 80-page BD proposal and four client conferences in Beijing, Shenzhen, Tianjin and Kunming in parallel",
+ "resi|jd":"Over 2,000 SKU listings processed per day for two straight months, while running merchant outreach, partner cooperation and the category weekly report",
+ "resi|tc":"Ran three tracks in parallel — edtech, Greater Bay Area tourism and the ByteDance migration — and followed contracts, settlement and invoicing all the way through",
+ "resi|unc":"Ranked first in my cohort while running three societies, English debating, three stage plays, volunteering in Yunnan and a short film",
+ "resi|lse":"Switched continuously between London, Beijing and Shenzhen during the master's, completing two full-time internships at JD and Tencent",
+ "resi|md":"Balanced study and the venture for 12 months, opening 130+ leads and earning over RMB 70K",
+ "tech|tc":"Can explain AI products at the level of business value and volume (how Token and GPU consumption is calculated), but architecture selection and parameter configuration remain architect-led — I learn alongside and take notes on the spot",
+ "tech|jd":"Worked at the tool layer — GoldenEye, easyBI, Tongtianta and online storefront builds — not on system architecture"
+};
+var RADAR=[
+ {id:"learn",now:95},
+ {id:"eng",  now:93},
+ {id:"ai",   now:70},
+ {id:"data", now:65},
+ {id:"resi", now:94},
+ {id:"tech", now:48}
+];
+var CAPDEF={
+ learn:"Entered with the lowest provincial admission score; ranked 1st of 312 two years later.",
+ eng:"IELTS 7.5 on first attempt; degree, international rating filings and client communication all done in English.",
+ ai:"I built this site myself; at JD I built automation with AI and lifted efficiency by over 60%.",
+ data:"Turned 'who do we hit first' into a ranked list: Top 50 segmentation at JD, opportunity sizing at Tencent.",
+ resi:"Self-sourced accounts; worked and studied independently across Beijing, Shanghai, Hong Kong, Shenzhen and overseas; keep taking on new things.",
+ tech:"Non-technical background, still learning: holds the Tencent Cloud Practitioner Certificate."
+};
+var UPLIFT={
+ learn:"Break what I don't understand into small questions I can verify, then turn it into a process.",
+ eng:"Prioritise English-language materials; targeting Speaking 7.5+ within a year.",
+ ai:"Keep making my workflow more AI-native; translate new Tencent Cloud AI capabilities into client scenarios.",
+ data:"Add SQL and BI; keep a checkable calculation sheet behind every judgement.",
+ resi:"Daily-granularity lists; set a minimum deliverable per track, then push for more.",
+ tech:"Passed the Tencent Cloud Practitioner Certificate; join architect visits and walk the full technical chain."
+};
+var GAP={
+ tech:"Non-technical background, so the architecture layer still depends on architects. What I'm doing about it: beyond the certificate, I join architect visits, take notes on the spot and replay them after every meeting."
+};
+var RADMAP={};RADAR.forEach(function(r){RADMAP[r.id]=r});
+var REL={};
+CAPS.forEach(function(c){
+  REL[c.id]=MXCOLS.filter(function(e){return (MATRIX[c.id][e.id]||0)>=2;}).map(function(e){return e.id;});
+});
+var CAPNAME={};CAPS.forEach(function(c){CAPNAME[c.id]=c.t});
+var EXPNAME={};EXPS.forEach(function(e){EXPNAME[e.id]=e.t});
+var EVID={
+ learn:[
+  "UNNC: entered with the lowest provincial admission score of that intake, following lectures through translation software; two years later ranked 1st of 312, GPA 3.8/4.0, UK First-Class Honours",
+  "IELTS 7.5 on first attempt (Listening & Reading 8.5): vocabulary and reading volume first, keeping the feel alive daily in the final week — method before hours",
+  "JD: learned GoldenEye, easyBI and the Tongtianta back-end from zero in two weeks, then automated the category weekly report with JoyClaw AI; data analysis efficiency up over 60%",
+  "Tencent Cloud: self-taught cloud and AI product language (Token, GPU, Workbuddy) in two months; now able to size client volume independently; holds the Tencent Cloud Practitioner Certificate"
+ ],
+ eng:[
+  "IELTS 7.5 (Speaking 7.0) on first attempt; Listening & Reading 8.5",
+  "EY: completed CDP, DJSI, EcoVadis and MSCI international ratings and wrote ESG reports entirely in English",
+  "LSE: fully English-taught master's; worked in teams with classmates from many countries on case analysis and presentations",
+  "Seven Tencent interview rounds including an AI English interview; at UNNC won a tuition-waivered exchange to the University of Birmingham and joined local student societies"
+ ],
+ ai:[
+  "JD: built automated workflows with JoyClaw AI for the footwear category weekly report; data extraction and analysis efficiency up over 60%",
+  "Tencent Cloud: independently identified an edtech company's Token and Workbuddy Enterprise AI deployment needs — the product I sell is itself an AI workflow",
+  "Tools: Workbuddy, Codex, AI Agent workflows, Prompt Engineering, Gamma, NotebookLM; holds the Tencent Cloud Practitioner Certificate",
+  "This site: interactions, capability matrix and AI Q&A module, built by me from zero to one"
+ ],
+ data:[
+  "JD: fed two years of GMV, ad rates and outreach status into weighted segmentation to shortlist the Top 50 footwear merchants per region, turning 'who to hit first' into a ranked list, tracked on a weekly dashboard",
+  "Tencent Cloud: converted the client's vague feel into a testable volume assumption (Token call volume + GPU compute), using it to judge opportunity size and priority",
+  "Tencent Cloud: validated the direction with AI film and production cost reports — AI film costs less than half of traditional film, and a RMB 10M project carries roughly RMB 4M of Token spend",
+  "Tencent Cloud: on the ByteDance Volcano Cloud migration research, judged the real ask as cost reduction plus migration stability, and split the plan into optimising the existing estate first with commercial discount second, then convinced management",
+  "Tencent Cloud: reached 15+ key stakeholders and developed 25+ qualified opportunities, judging the reality and size of each need one by one"
+ ],
+ resi:[
+  "EY: nine months across Shanghai and Beijing, running six clients' ESG reports, an 80-page BD proposal and four client conferences in Beijing, Shenzhen, Tianjin and Kunming in parallel",
+  "JD: over 2,000 SKU listings per day for two straight months, while running merchant outreach, partner cooperation and the category weekly report",
+  "Switched continuously between London, Beijing and Shenzhen during the master's, completing two full-time internships at JD and Tencent while finishing the degree",
+  "Tencent Cloud: to reach decision-makers in person, I signed up for an AIGC film festival in Beijing, met key people at the dinner and exchanged contacts, then visited their office independently to verify the business was real",
+  "Content: balanced study and the venture for 12 months, opening 130+ leads and earning over RMB 70K"
+ ],
+ tech:[
+  "Tencent Cloud: can independently run business-side sizing and value argumentation (the AIGC client from opportunity discovery through to Token Hub onboarding and consumption), but architecture and parameter layers are architect-led",
+  "Tencent Cloud: on the tourism project, pinned down technical requirements with the architect, brought in ASR contact-centre QA and the TUILiveKit live streaming solution; I owned scenario mapping and organising the real-corpus POC",
+  "Credentials: holds the Tencent Cloud Practitioner Certificate (foundation level); not yet at solution-architect level",
+  "Honest scope: at JD I worked at the tool layer — GoldenEye, easyBI, Tongtianta and online storefront builds — not on system architecture"
+ ]
+};
+var TL=[
+ {id:"tc",lg:"tc",grp:"pro",ttl:"Tencent Cloud · Technical Product Business Development Trainee (Cloud &amp; AI Products)<span class='casetag'>CASE STUDY · AIGC FILM CLIENT</span>",meta:"Cloud and Smart Industries Group · Shenzhen HQ · 2026.07 – present",live:[["tc-welcome.jpg","WELCOME TO TENCENT"]],
+  hook:"Four steps to close an AIGC film client: read the market → validate with data → find the person → uncover the need; est. RMB 2M+ annual consumption from self-sourced accounts",
+  mini:[["RMB 2M+","Est. annual consumption, self-sourced"],["25+","Qualified opportunities developed"],["15+","Key stakeholders reached"]],hl:true,
+  sar:[["Background", "Technical Product Business Development Trainee (Cloud & AI products), Tencent Cloud and Smart Industries Group, Shenzhen HQ, on board since 2026.07. This job isn't taking orders — it's defining the requirement while the client still can't articulate it, then driving it all the way to consumption."], ["Actions · The Board", "On channels: through the lead pool, industry conferences and personal referrals I reached 15+ key stakeholders and independently developed and followed 25+ qualified opportunities, judging whether each cloud, Token or Workbuddy need was real and how big. On projects I ran three tracks in parallel: ① independently identified an edtech company's Token and Workbuddy Enterprise AI deployment needs; ② on a Greater Bay Area tourism client, ran four rounds of research and visits, pinned down business scenarios and technical requirements with the architect, brought in ASR contact-centre QA and the TUILiveKit live streaming application, and organised a real-corpus POC plus a competitive benchmark; ③ sat on site at a Beijing client to research a ByteDance Volcano Cloud → Tencent Cloud cost-reduction migration."], ["CASE STUDY · ① Read the market", "Demand for AI image and video generation was exploding, and almost everyone in the market was chasing short dramas — short, fast, high volume. I read it differently: short dramas tolerate lower visual quality, while feature-length AI film demands far more on both quality and stability, fewer teams can deliver it, and each project burns far more. So I targeted studios producing high-quality short dramas and AI films in China, rather than joining everyone else fighting over short dramas."], ["CASE STUDY · ② Validate with data", "I didn't pick the direction on instinct — I looked for data. I pulled a set of industry reports on AI film and production cost to cross-check: AI film costs less than half of traditional film, and Token consumption is real and recurring, not a one-off purchase. On sizing I ran a rough calculation — a RMB 10M AI film project carries roughly RMB 4M of Token-related spend. Those numbers told me this direction was worth committing to."], ["CASE STUDY · ③ Find the person", "The list didn't come from the lead pool. I traced released AI films and project materials back to the studios behind them, then layered personal networks on top to reach key people, adding each one to a list to work through. The client I eventually closed was on that list from the start, but I judged online conversations inefficient — I found an AIGC film festival in Beijing where founders of several companies on my list appeared on the attendance list, so I signed up, went, met them at the dinner and exchanged contacts. Afterwards I visited them independently and toured their office to confirm the business and the capacity were real."], ["CASE STUDY · ④ Uncover the need · Give value", "This was the hardest step. The client had quietly plugged in a large number of model channels, including overseas ones, all cheaper than a cloud vendor like Tencent Cloud — on price alone they had no reason to buy from us. I didn't push; I kept talking. While discussing performance management with their IT head I found the real problem: they had no unified bill, so they couldn't assess artists on Token consumption — they wanted to allow one finished frame for every five generated, deducting from performance reviews beyond that, to push artists to write better prompts, but consumption across multiple channels simply couldn't be counted together. Tencent Cloud's unified LLM platform solves exactly that: unified metering and billing across models. I won their boss over with that point, projected this year's consumption at the million-RMB level from their business volume, and used that size to pull support from our own leadership and architects — then closed the deal."], ["CASE STUDY · Result", "The client has completed Token Hub onboarding and moved into post-paid consumption. Reading the market, validating with data, finding the person, and uncovering the need in a client with no reason to buy — every link in that chain was driven by me independently."], ["Business judgement · ByteDance Volcano Cloud migration", "This wasn't execution work. The client asked for a discount; after research I judged the real need as cost reduction plus migration stability — a discount alone doesn't lower cost and leaves migration risk uncovered. So I anchored the plan on optimising the existing estate (resource governance, architecture adjustments) with the commercial discount as secondary, sat on site in Beijing and ran six cross-team alignment meetings, and got client management to accept that order: get them to accept the more correct path first, rather than conceding price first."], ["Results · Overall", "Accounts I sourced independently total an estimated RMB 2M+ in annual consumption: the AIGC film client completed Token Hub onboarding and moved into post-paid consumption; the edtech client is deploying Token and Workbuddy Enterprise; the tourism SaaS project is in selection; and the ByteDance client's management accepted the 'optimise first, discount second' strategy. I also follow contract drafting and revision, settlement and invoicing to avoid collection risk."], ["Why it matters", "This is a sequence I worked out myself, and it is repeatable: read the market to find the direction, validate it with data, then do whatever it takes to reach the right person, and finally dig out the real pain point when the client has no reason to buy. When you cannot win on price, the only thing left is finding a problem only you can solve — unified billing was that problem. The consumption figures are extrapolated after the client started consuming; they are not a quote."]],
+  kpi:[["RMB 2M+", "Est. annual consumption, self-sourced (total)"], ["15+", "Key stakeholders reached"], ["25+", "Qualified opportunities developed"], ["6", "Cross-team alignment meetings"], ["4", "Rounds of research with the tourism client"]],shots:[["tc-offer.jpg","Tencent offer notice"],["tc-welcome.jpg","WELCOME TO TENCENT"]]},
+ {id:"jd",lg:"jd",grp:"pro",ttl:"JD.com · E-commerce Operations (Buying) Summer Intern",meta:"Retail · Beijing HQ · 2026.05 – 2026.07",live:[["jd-badge.jpg","JD Retail · Fashion Business Group badge"]],
+  hook:"Took the CPS channel from zero to 900+ orders in a single week within two months; GMV up 600% week on week",
+  mini:[["900+","Best-seller units in one week"],["600%+","GMV vs prior week"]],hl:false,
+  sar:[["Background", "E-commerce operations (buying) summer intern at JD Retail, Beijing HQ, owning the footwear category. Two problems were obvious when I took over: many merchants but no idea who to hit first, and channels that existed but had never been made to work."], ["Actions", "Priority first: using JoyClaw AI with two years of GMV, ad rates and outreach status as weighted inputs, I segmented and shortlisted the Top 50 footwear merchants per region, then ran potential analysis on GMV, year-on-year and sell-through with a weekly dashboard. Channels next: multi-channel outreach to the Top 50 merchants not yet contacted, plus direct outreach to 100+ CPS partners and 150 completed channel sales, with the process turned into a cooperation SOP, a best-seller library and scripts, recording each partner's product preferences and link requirements. I also followed the full Jingxi self-operated merchant onboarding, selection and listing flow, and trained 30+ merchants on improving sell-through."], ["Results", "Onboarded 27 merchants, 12 of them controllable; a best-selling slipper sold 900+ units across two campaigns in one week, with GMV up over 600% week on week; low-quality listings fell 40% after training; the automated weekly report built with AI lifted data extraction and analysis efficiency by over 60%; and I processed 2,000+ listings per day."]],
+  kpi:[["27", "Merchants onboarded (12 controllable)"], ["900+", "Best-seller units in one week"], ["600%+", "GMV growth vs prior week"], ["60%+", "Data analysis efficiency gain"], ["2000+", "Listings processed per day"]],shots:[["jd-badge.jpg","JD Retail · Fashion Business Group badge"],["jd-live.jpg","Footwear category livestream, 519K views in one session"]]},
+ {id:"ey",lg:"ey",grp:"pro",ttl:"EY · Sustainability Strategy Consulting Intern",meta:"Consulting · Shanghai &amp; Beijing offices · 2024.06 – 2025.03",live:[["ey-solo.jpg","EY Beijing · solo shot by the EY sign"]],
+  hook:"Nine months across Shanghai and Beijing: six clients' ESG reports and an 80-page BD proposal running in parallel",
+  mini:[["80 pages","BD service proposal"],["100+","Client invitations"]],hl:false,
+  sar:[["Background", "Intern in EY's sustainability strategy team, Shanghai and Beijing offices, 2024.06–2025.03. I carried delivery and BD at the same time: on one side, rating filings and reports clients were waiting on; on the other, opportunities that didn't exist yet."], ["Actions", "Delivery: worked on capital-markets rating improvement projects for multiple companies, filing third-party ESG ratings including CDP, DJSI, EcoVadis and MSCI; joined a supply-chain transformation project for a leading international food company, sizing cage-free egg suppliers and producing a 30-page feasibility report with analysis charts; followed the drafting of six clients' ESG reports. BD: against the backdrop of new disclosure rules from China's three major exchanges, I mapped the climate disclosure policy requirements facing prospects' domestic and overseas operations, produced an 80-page service proposal deck (needs understanding, benchmark cases, data analysis materials, visualised solution charts) and joined three rounds of client visits to present it live."], ["Results", "Helped organise four client conferences in Beijing, Shenzhen, Tianjin and Kunming, inviting 100+ prospects through public information, CRM and other channels and supporting on-site hosting; joined senior interviews in energy, F&B and other industries, and wrote up 17 sets of minutes on rating improvement targets and sustainability strategy."]],
+  kpi:[["6", "Client ESG reports"], ["80pp", "Service proposal deck"], ["100+", "Prospect invitations"], ["17", "Senior interview minutes"], ["30pp", "Feasibility report"]],shots:[["ey-intern.jpg","EY summer internship offer (CCaSS)"],["ey-office.jpg","EY Beijing office"]]},
+ {id:"md",lg:"md",grp:"pro",ttl:"Backwards Studio · Partner &amp; Business Development",meta:"RED \"Capybara\" · Online &amp; Ningbo · 2024.09 – 2025.09",live:[],
+  hook:"Zero ad budget: 24 posts → 130+ leads → RMB 70K+ profit",
+  mini:[["10,195","Total likes on RED"],["130+","Leads generated"]],hl:false,
+  sar:[["Background", "RED account \"Capybara\" plus partner at Backwards Studio (2024.09–2025.09), selling study-abroad services and offline tutoring. The constraint at the start was hard: no advertising budget, so content was the only route."], ["Actions", "Built a persona across RED and on-campus platforms and kept publishing, routed content traffic into private channels, ran consultations and conversion myself, and delivered the offline tutoring. Content fell into four buckets: internship and workplace field notes, applications, campus growth, and study-abroad daily life."], ["Results", "The RED account published 24 notes (2024.03–2026.07) with a verified total of 10,195 likes, 3,008 saves, 1,704 comments, 1,793 shares and 2,671 followers; across platforms, posts took 23K+ likes and 300K+ views. Commercially, in one year I opened 130+ leads, signed 40+ study-abroad clients and 15+ offline tutoring clients, and earned over RMB 70K — running the full loop from content to leads to signed contracts to delivery."]],
+  kpi:[["24", "RED notes published"], ["10,195", "Total likes on RED"], ["300K+", "Reach across platforms"], ["130+", "Leads generated"], ["RMB 70K+", "Profit to date"]],shots:[["hl-ey.jpg","Cover: \"My first consulting internship is over\""],["hl-lbs.jpg","Cover: \"From UNNC top 1% to an LBS offer\""]]},
+ {id:"lse",lg:"lse",grp:"edu",ttl:"London School of Economics · MSc Management",meta:"LSE · London · 2025.10 – 2026.11",live:[["lse-offer.jpg","LSE offer · Department of Management"]],
+  hook:"Concurrent admits from LBS / NUS / Duke",
+  mini:[["RMB 80K","Postgraduate scholarship"],["3","Other concurrent admits"]],hl:false,
+  sar:[["School", "MSc Management at the London School of Economics (LSE), 2025.10–2026.11, with a postgraduate scholarship of RMB 80K."], ["Admissions", "I also held concurrent offers from London Business School (LBS), the National University of Singapore (NUS) and Duke University."], ["The Trade-off", "LBS was the highest-ranked offer of that season, but inside China its recognition is limited outside top-tier finance and consulting; with a Sino-foreign joint-venture undergraduate degree, I needed a school name that required no extra explanation in recruitment screening. I compared screening costs and chose LSE — the reasoning was on the public record at the time."], ["Notes", "Fully English-taught environment, working in teams with classmates from many countries on case analysis and presentations; in the same period I switched continuously between London, Beijing and Shenzhen and completed two full-time internships at JD and Tencent."]],
+  kpi:[["LSE", "MSc Management"], ["3", "Other concurrent admits (LBS/NUS/Duke)"], ["RMB 80K", "Postgraduate scholarship"], ["7.5", "IELTS (Speaking 7.0)"]],shots:[["lse-msc.jpg","LSE MSc Management & Strategy (M&S)"],["lse-offer.jpg","LSE offer letter"],["lse-welcome.jpg","LSE arrival"]]},
+ {id:"unnc",lg:"unc",grp:"edu",ttl:"University of Nottingham Ningbo China · BSc Economics",meta:"UNNC · Ningbo · 2021.09 – 2025.07 (incl. University of Birmingham exchange)",live:[["unnc-sky.jpg","UNNC · campus"]],
+  hook:"Entered with the lowest admission score of the intake; graduated ranked 1st of 312 with UK First-Class Honours",
+  mini:[["1/312","Cohort rank"],["3.8/4.0","GPA"]],hl:false,
+  sar:[["Undergraduate", "BSc Economics at the University of Nottingham Ningbo China (2021.09–2025.07), GPA 3.8/4.0, ranked 1st of 312 for two consecutive years, UK First-Class Honours, outstanding graduate."], ["Starting point", "On entry I had the lowest provincial entrance score of that intake and relied on translation software in early lectures. Two years later I was in the top 1% of my cohort, held an RMB 35K Chancellor's Scholarship, took IELTS 7.5 on first attempt (Listening & Reading 8.5), and went on a tuition-waivered exchange to the University of Birmingham (2023.09–2024.03)."], ["Honours", "Two Chancellor's Scholarships (top 1%), plus Zhejiang Provincial and Ningbo municipal scholarships, totalling about RMB 100K; a face of the university's marketing, taking part in the 20th anniversary performance and promotional filming."], ["Beyond the grades", "Three years of parallel pursuits: three societies, English debating, three stage plays (including a male lead in a large production), volunteering in Yunnan, a short film, and local student societies and camping in Birmingham."]],
+  kpi:[["1/312", "Cohort rank over two years"], ["3.8/4.0", "GPA"], ["RMB 100K", "Undergraduate scholarships"], ["7.5", "IELTS (Speaking 7.0)"]],shots:[["unnc-scholarship.jpg","Chancellor's Scholarship certificate · Academic Excellence"],["ielts.jpg","IELTS first attempt: overall 7.5, Listening & Reading 8.5"],["unnc-awards.jpg","Undergraduate scholarships totalling RMB 100K+"]]}
+];
+
+var VIEWS={
+ xhs:[["Total likes","10,195",100],["Total saves","3,008",30],["Total comments","1,704",17],["Total shares","1,793",18],["Notes published","24",14],["Followers","2,671",26]],
+ impact:[["Total reach (views)","300K+",100],["Total engagement (likes)","23K+",72]],
+ biz:[["Leads generated","130+",100],["Study-abroad contracts signed","40+",78],["Offline tutoring clients","15+",56]]
+};
+
+var HIGHLIGHTS=[{"title": "My first consulting internship is over", "img": "hl-ey.jpg", "date": "2024-08-31", "like": "2736", "collect": "1191", "comment": "286", "why": "Best-performing post on the account; a real debrief rather than a diary, with the comments turning into peer discussion"}, {"title": "UNNC | Top 1% of my year — maybe I can finally talk about UNNC", "img": "hl-unnc.jpg", "date": "2024-07-11", "like": "1305", "collect": "518", "comment": "211", "why": "1,305 likes / 518 saves; spells out who this university suits and who it does not, including the downsides"}, {"title": "University is over", "img": "unnc-awards.jpg", "date": "2025-05-22", "like": "915", "collect": "101", "comment": "106", "why": "The full arc from lowest provincial entrance score to outstanding graduate"}, {"title": "Big Four consulting summer intern | Internship notes", "img": "hl-ey2.jpg", "date": "2024-06-28", "like": "715", "collect": "233", "comment": "101", "why": "715 likes / 233 saves; month-one daily detail, with more information density than conclusions"}, {"title": "My JD summer internship at RMB 400+ a day is over", "img": "hl-jd.jpg", "date": "2026-07-12", "like": "667", "collect": "121", "comment": "61", "why": "Publicly sets out the reasoning and the maths behind giving up the return offer"}, {"title": "From top 1% at UNNC to an LBS offer, but…", "img": "hl-lbs.jpg", "date": "2025-03-15", "like": "376", "collect": "143", "comment": "256", "why": "The school decision broken down in full; 256 comments drove most of the engagement"}, {"title": "🐧 Tencent summer offer! (referral code available to check status)", "img": "tc-offer.jpg", "date": "2026-07-19", "like": "303", "collect": "49", "comment": "82", "why": "Seven rounds into Tencent, written up as a reusable interview guide"}, {"title": "But my three years at university were never just scholarships and big-name internships", "img": "hl-more.jpg", "date": "2024-08-25", "like": "222", "collect": "38", "comment": "29", "why": "Societies, stage plays and volunteering beyond the scholarships and internships"}];
+var VOICES=[{"quote": "The most important thing is that here, your future really is in your own hands — studying hard and actively trying things pays you back directly.", "from": "UNNC | Top 1% of my year — maybe I can finally talk about UNNC", "date": "2024-07-11", "note": "Attribution style: only the variables I can control"}, {"quote": "Given the job market and society we are in today, even very deliberate planning and effort cannot guarantee a good outcome. What we should do instead is take seriously the things we genuinely want to do, even when they look “meaningless”.", "from": "But my three years at university were never just scholarships and big-name internships", "date": "2024-08-25", "note": "When the payoff is uncertain, the standard of effort does not drop"}, {"quote": "I have often felt regret in my life, but these four years at university hold none. I already did my best; even if I could start over, I could not have chosen better.", "from": "University is over", "date": "2025-05-22", "note": "Settling standard: no regrets, not numbers"}, {"quote": "For most industries, a Sino-foreign joint-venture degree plus LBS carries a really high explanation cost — high enough to lose many of the opportunities that an IC, LSE or NUS master's would have opened.", "from": "From top 1% at UNNC to an LBS offer, but…", "date": "2025-03-15", "note": "Decision style: convert prestige into screening risk, then judge"}, {"quote": "Do not go into interviews humble or tense. Placing yourself too low sends a dangerous signal — it may suggest that even you think you do not deserve the role.", "from": "🐧 Tencent summer offer! (referral code available to check status)", "date": "2026-07-19", "note": "Communication posture: represent the solution, not a posture"}, {"quote": "Giving up a very well-paid return offer to try a completely new role will definitely be brutal and hard, but I still do not want to regret missing it.", "from": "My JD summer internship at RMB 400+ a day is over", "date": "2026-07-12", "note": "Opportunity cost: direction over pay, and the cost is bearable"}];
+
+var KB=[
+ {kw:["aigc", "film", "token", "gpu", "consumption", "hub", "case", "process"],a:"Four steps. ① Read the market: demand for AI image and video generation was exploding and everyone was chasing short dramas; I judged that feature-length AI film demands more on quality and stability and burns more per project, so I targeted studios doing high-quality short dramas and AI films. ② Validate with data: I cross-checked industry reports on AI film and production cost — AI film costs less than half of traditional film, and Token consumption is real and recurring; a rough calculation put Token-related spend at around RMB 4M for a RMB 10M project, which confirmed the direction was worth committing to. ③ Find the person: I traced released AI films back to the studios behind them, layered personal networks on top to reach key people, and worked a list; I found an AIGC film festival in Beijing where founders of several companies on my list were on the attendance list, signed up, went, met them at the dinner and exchanged contacts, then visited their office independently to verify the business was real. ④ Uncover the need: the hardest part — the client had quietly plugged in many cheaper model channels including overseas ones, so on price we had no chance. While talking performance management with their IT head I found the real problem: no unified bill, so they could not assess artists on Token consumption (one finished frame allowed per five generated, deducting beyond that, to push better prompts), while Tencent Cloud's unified LLM platform meters across models. That won the boss over; I projected million-RMB-level annual consumption from their volume and used it to pull support from our own leadership and architects, then closed — they have now completed Token Hub onboarding and moved into post-paid consumption."},
+ {kw:["methodology", "approach", "sales", "steps", "how do you sell", "prospecting", "four steps", "thinking"],a:"My sales logic is four steps, and the order cannot be reversed: read the market to find the direction, validate it with data, find the right person, then uncover the need and give value. Reading the market means judging where the money and the consumption will happen, not following the crowd; validating with data means proving that judgement with reports and sizing so it isn't self-delusion; finding the person means reaching the decision-maker in person rather than only online; uncovering the need means finding the one problem only you can solve when the client has no reason to buy — for the AIGC client that was unified billing. These four steps ran most completely on the AIGC film client; tourism and edtech used the same sequence."},
+ {kw:["results", "2m", "achievements", "numbers", "kpi", "consumption", "basis"],a:"The basis first: RMB 2M+ is the combined estimated annual consumption of the multiple accounts I sourced myself, extrapolated from current call volume and purchase intent; the deepest of them is the AIGC film client, which has completed Token Hub onboarding and moved into post-paid consumption. That number is a size extrapolated after the client started consuming — it is not a quote and not a confirmed contract value. If pushed, I say exactly that."},
+ {kw:["hard part", "difficulty", "how did you", "why did it close", "convince", "push back"],a:"There were two difficulties, both before the deal. First, the client did not know what to buy and had no volume baseline, so there was nothing to quote against — my approach was to talk business, not product, extrapolating consumption from their growth and turning a vague judgement into an assumption both sides accepted. The second was harder: the client had quietly plugged in many cheaper model channels including overseas ones, so on price we had no chance and no reason for them to buy. The turn came from a performance management conversation — they had no unified bill and could not assess artists on Token consumption, while Tencent Cloud's unified LLM platform meters across models. Finding that one problem only I could solve is what made the deal possible. The volume figures are extrapolated after consumption began, not a quote, and can be checked monthly."},
+ {kw:["tencent", "role", "technical product", "what do you do", "responsibilities", "understand"],a:"Technical product business development is not sales execution — it is translating cloud and AI products into a solution the client can cost out, and owning the opportunity to the end. My day-to-day: find key people through the lead pool, industry conferences and referrals; judge whether their cloud and AI needs are real and how large; build the solution with architects and pre-sales; then follow contract, settlement and invoicing. Judgement is the core of the role, because a BD person's time is the scarce resource."},
+ {kw:["visit", "stakeholders", "leads", "15", "25", "opportunities", "pipeline"],a:"Through the lead pool, industry conferences and referrals I have reached 15+ key stakeholders and independently developed and followed 25+ qualified opportunities. In every conversation I ask about the business first, then judge whether the need is real and how big, rather than presenting the product. The clearest ones to convert were an AIGC film studio (Token Hub onboarding completed, now in post-paid consumption) and an edtech company (Token and Workbuddy Enterprise AI deployment)."},
+ {kw:["tourism", "travel", "saas", "asr", "live", "tuilivekit", "poc", "greater bay", "selection"],a:"A tourism client in the Greater Bay Area: I ran four rounds of research and visits, dug two real scenarios out of a pile of vague requests — contact-centre QA and live streaming — pinned down business and technical requirements with the architect, then brought in the ASR contact-centre QA solution and Tencent Cloud's TUILiveKit live streaming, organising a real-corpus POC and a competitive benchmark. The project is now in selection. The value of this track is proving I can translate a need into a specification the technical side can deliver."},
+ {kw:["bytedance", "volcano", "migration", "cost", "six", "alignment", "optimise", "on site"],a:"This was not execution work. The client asked for a discount; after research I judged the real need as cost reduction plus migration stability — a discount alone would not cut cost and would leave migration risk uncovered. So I anchored the plan on optimising the existing estate, with the commercial discount secondary, sat on site in Beijing and ran six cross-team alignment meetings, and got client management to accept that order. Getting them to accept the more correct path before conceding price is what business judgement looks like."},
+ {kw:["edtech", "education", "workbuddy", "enterprise", "deployment", "ai needs"],a:"This is a need I found myself: an edtech company's Token and Workbuddy Enterprise AI deployment. Put next to the AIGC film case, it shows that spotting AI demand is not luck — I can locate where AI should sit in a client's process and what it will consume, then size the opportunity from there."},
+ {kw:["contract", "settlement", "invoice", "collection", "risk", "process", "project support"],a:"On project support I coordinate with sales, pre-sales and delivery, help run cross-department meetings, and follow contract drafting and revision, settlement and invoicing to avoid collection risk. None of this produces highlights, but it is the last mile that turns an opportunity into revenue — if the contract isn't signed and the invoice can't be issued, all the discovery work upstream counts for nothing."},
+ {kw:["why", "switch", "consulting", "cloud", "internet", "career"],a:"Moving from consulting to cloud was not a change of direction — it is the same job in a different container: I have always dug the real requirement out of incomplete information and pushed it into reality. Consulting gave me structured decomposition and the ability to speak to senior stakeholders; e-commerce and cloud gave me the closed loop of pushing a solution until it actually runs and produces numbers. AI makes that job a better container than ever, because clients need someone to translate technology into business more than they ever have."},
+ {kw:["consulting", "cloud", "difference", "compare"],a:"Consulting delivers reports and conclusions, and what the client accepts is the logic. Cloud delivers consumption, and what the client accepts is the bill. The former stops when the recommendation is adopted; the latter has to run until the client is really using it and really paying. That is why I chose Tencent Cloud — I want to be accountable for the outcome of what I push, not just for the quality of a report."},
+ {kw:["jd", "return offer", "give up", "leave", "why leave", "regret"],a:"At JD a return offer was essentially guaranteed and my manager looked after me well, but I did not have much conviction in the category I was working on. Given my interests and where I want to go, tracks like tech AI, cloud, and home-appliance and 3C overseas GTM attract me more and have better prospects. Trading a fairly certain opportunity for a harder track — I did not want to regret missing it. That is still the judgement I stand by."},
+ {kw:["jd", "buying", "numbers", "results", "what did you do", "27", "900"],a:"Footwear category. Using JoyClaw AI with two years of GMV, ad rates and outreach status as weighted inputs, I shortlisted the Top 50 merchants per region with potential analysis and a weekly dashboard; I reached 27 previously uncontacted merchants across multiple channels and could control 12. I also contacted 100+ CPS partners directly and completed 150 channel sales; a best-selling slipper sold 900+ units across two campaigns in one week with GMV up over 600% week on week; low-quality listings fell 40% after training 30+ merchants."},
+ {kw:["joyclaw", "ai efficiency", "weekly report", "60%", "automation", "efficiency"],a:"JD calls it JoyClaw AI internally. I used it to set up an automated flow for the footwear category weekly report, automating the repeated chain of extraction, cleaning and analysis — data extraction and analysis efficiency up over 60%. I use the same thinking at Tencent: this site, with its interactions and AI Q&A module, was also built by me from zero to one."},
+ {kw:["ey", "esg", "what did you do", "ratings", "cdp", "djsi", "ecovadis", "msci"],a:"EY sustainability strategy team, 2024.06–2025.03, across the Shanghai and Beijing offices. I worked on capital-markets rating improvement projects for multiple companies, filing third-party ESG ratings including CDP, DJSI, EcoVadis and MSCI; joined a supply-chain transformation project for a leading international food company, sizing cage-free egg suppliers and producing a 30-page feasibility report with analysis charts; and followed the drafting of six clients' ESG reports."},
+ {kw:["80 pages", "bd", "business development", "client events", "invitations", "17", "senior", "minutes"],a:"Against the backdrop of new disclosure rules from China's three major exchanges, I led BD into large enterprises: mapping the climate disclosure policy requirements facing prospects' domestic and overseas operations, producing an 80-page service proposal deck (needs understanding, benchmark cases, data analysis materials, visualised solution charts), and joining three rounds of client visits to present it live. I also helped organise four client conferences in Beijing, Shenzhen, Tianjin and Kunming, invited 100+ prospects across multiple channels, and wrote up 17 sets of senior interview minutes from the energy and F&B industries."},
+ {kw:["ey", "learned", "takeaways", "consulting skills", "transfer"],a:"Two things. First, structure: break any problem into answerable sub-questions before deciding which are worth doing. Second, client language: ESG rating filings and senior interviews trained me to write in language that circulates inside the client's organisation. Both transferred directly to Tencent Cloud — the needs clarification on the AIGC client used the same decomposition, just with rating metrics swapped for call volume."},
+ {kw:["content", "red", "xiaohongshu", "capybara", "followers", "data", "notes", "likes"],a:"On RED, \"Capybara\": 24 notes verified (2024.03–2026.07), with 10,195 likes, 3,008 saves, 1,704 comments, 1,793 shares and 2,671 followers. The best single post is \"My first consulting internship is over\" at 2,736 likes / 1,191 saves. Across platforms (including on-campus platforms) posts took 23K+ likes and 300K+ views. Every figure was scraped post by post and can be checked against the individual posts."},
+ {kw:["content philosophy", "viral", "what content", "topics", "pattern", "saves", "comments"],a:"Three patterns I derived from my own data. One: real detail plus concrete numbers travels furthest — workplace field notes are the main force, and my top posts are almost all internship debriefs. Two: practical, reusable content gets the highest save rate — an IELTS post took 268 likes against 204 saves, a save-to-like ratio around 76%. Three: showing a real dilemma generates more conversation than showing results — the LBS post took 376 likes against 256 comments, a comment-to-like ratio around 68%, far above my average."},
+ {kw:["best post", "which one", "recommend", "most popular", "which to read"],a:"If you read one: \"My first consulting internship is over\" (2,736 likes / 1,191 saves), a debrief of my EY internship including what my manager said about me. For my views: \"UNNC | Top 1% of my year — maybe I can finally talk about UNNC\" (1,305 likes / 518 saves), which is clear about who this university is not for. For a decision: \"From top 1% at UNNC to an LBS offer, but…\" (376 likes / 256 comments)."},
+ {kw:["monetisation", "revenue", "profit", "70k", "signed", "clients", "studio"],a:"Backwards Studio, 2024.09–2025.09, selling study-abroad services and offline tutoring with no advertising budget. The path was content building trust → private-channel consultation → contract → delivery. In one year: 130+ leads opened, 40+ study-abroad clients signed, 15+ offline tutoring clients, and over RMB 70K earned. This gave me a felt understanding of acquisition cost, and of why clients pay for trust."},
+ {kw:["education", "lse", "unnc", "birmingham", "gpa", "1/312", "exchange", "first class"],a:"MSc Management at LSE (2025.10–2026.11) with an RMB 80K postgraduate scholarship; BSc Economics at the University of Nottingham Ningbo China, GPA 3.8/4.0, ranked 1st of 312 for two consecutive years, UK First-Class Honours, outstanding graduate; tuition-waivered exchange at the University of Birmingham (2023.09–2024.03). Undergraduate scholarships (Chancellor's, Zhejiang Provincial, Ningbo municipal and others) totalled about RMB 100K."},
+ {kw:["english", "ielts", "speaking", "how did you learn", "practice"],a:"IELTS 7.5 with Speaking 7.0 on first attempt, Listening & Reading 8.5. Years of English-medium education and living abroad mean I can work entirely in English — the ESG rating filings and report writing at EY and the master's at LSE were both done in English. The method is vocabulary and reading volume first, switching my phone and everyday apps to English, practising through content I actually enjoy, and keeping the feel alive daily in the final week rather than memorising past papers."},
+ {kw:["lbs", "nus", "duke", "school choice", "why lse", "admission", "offer"],a:"I held concurrent offers from LBS, NUS, Duke and LSE. LBS was the best offer of that application season, but I did not choose on ranking: inside China its recognition is limited outside top-tier finance and consulting, and with a Sino-foreign joint-venture undergraduate degree I needed a title that required no extra explanation in any industry, to lower screening cost. I wrote that reasoning publicly in March 2025, and doing B2B business development today I still benefit from that title."},
+ {kw:["lowest score", "comeback", "how", "study method", "ranked first", "starting point"],a:"On entry I had the lowest provincial entrance score of that intake and needed translation software to follow lectures. The turn was methodological: vocabulary and reading volume first, and not grinding through reading passages I could not understand; switching my phone and everyday apps to English; practising through content I enjoyed, like history and science-fiction documentaries; concentrated practice before exams, keeping the feel alive daily in the final week. Two years later I was in the top 1% of my cohort, held an RMB 35K Chancellor's Scholarship, and took IELTS 7.5 on first attempt."},
+ {kw:["ai", "tools", "workbuddy", "codex", "prompt", "agent", "gamma", "notebooklm", "certificate"],a:"I am fluent with Workbuddy, Codex, AI Agent workflows, Prompt Engineering, Gamma and NotebookLM, and have hands-on experience building automated AI flows; I hold the Tencent Cloud Practitioner Certificate. At JD I used JoyClaw AI to automate workflows and lifted data analysis efficiency by over 60%; at Tencent I sell AI products themselves. This site, with its interactions and AI Q&A module, was built by me from zero to one."},
+ {kw:["token", "gpu", "explain", "ai products", "monetisation", "compute"],a:"Tokens are the consumable billed by call volume, GPU is the compute substrate, and together they determine an AI client's cost structure. The client's difficulty is not unit price, it is not being able to estimate volume — before you run, you do not know what you will spend. So the value a BD person adds is converting business scenarios into call volume so the client dares to start; once it runs, the consumption speaks for itself. The AIGC film client is exactly the case of moving from un-estimable to post-paid consumption."},
+ {kw:["strengths", "advantages", "why you", "core", "competitive"],a:"Two. First, needs discovery: I can get the question out even when the client cannot articulate it — that is how the AIGC film and Greater Bay Area tourism clients were worked. Second, I can drive: on the ByteDance migration it took six cross-team alignment meetings to get client management to accept a plan more correct than simply conceding price. A third: I am willing to finish the job at the client's site rather than stopping at the proposal stage."},
+ {kw:["weaknesses", "gaps", "improve", "shortcomings"],a:"The most obvious gap is technical background: purely humanities and business, no science or engineering training, so when I first met cloud products I had to learn architecture and parameters on the fly. I handle it by writing down what I don't understand on the spot, aligning with architects afterwards, never bluffing my way through, and taking the Tencent Cloud Practitioner Certificate to build the base. The other gap is depth of experience: when many clients run in parallel, I still need to be more decisive about prioritisation."},
+ {kw:["pressure", "resilience", "how do you cope", "overtime", "emotion", "parallel"],a:"I dislike talking about resilience in the abstract, so here are facts: at JD, 2,000+ listings processed per day for two straight months; at EY, nine months across Shanghai and Beijing running six clients' reports, an 80-page BD proposal and four client conferences in parallel; during the master's, two full-time internships back to back at JD and Tencent while switching between London, Beijing and Shenzhen. My method is breaking parallel tracks into daily-granularity lists, guaranteeing a minimum deliverable per track, then pushing for more."},
+ {kw:["hobbies", "interests", "games", "cooking", "sport", "ps5"],a:"Gaming and cooking, with a PS5 that travels with me — on my first day in London I had the monitor and console set up and was playing Silksong on a big screen that evening. For sport, badminton: at JD I played with colleagues and our manager at weekends, and I swim. I have also acted in three stage plays and volunteered teaching in Yunnan. None of this is on my CV, but it is why I am willing to say things clearly in front of strangers, and why I can take being watched."},
+ {kw:["plan", "future", "three years", "stay at tencent", "goals", "conversion"],a:"Near term, turn the opportunities in hand into real revenue: move the AIGC client from consumption to stable renewal, and the tourism client from selection to signature. Longer term I want to become the kind of BD person who both understands AI products and can own an entire industry — going deep first with AI-native clients like film and edtech, then turning repeatable needs-identification into a playbook, rather than relying on isolated bursts of hard work."},
+ {kw:["non-985", "humanities", "degree", "competition", "stem", "differentiation", "seven rounds"],a:"I am not from a 985 or 211 university, I am a pure humanities and business graduate with no science or engineering background, and I had no vertical big-tech experience on my CV — the Tencent summer role took seven rounds (AI interview, group interview, AI English interview, business interview, leader interview, director interview, HR interview). Against candidates with technical degrees I do not compete on parameters; my edge is on the client side — translating technology into an account the client can cost out, and driving the solution to real consumption on site. Technical knowledge can be learned; client trust and judgement only grow in the field."},
+ {kw:["radar","matrix","hexagon","capability","self assessment","score","basis","gap","why so low"],a:"These scores are my own assessment, not any institution's test result. Scale: 0–100, showing where I am right now. Learning 95, Resilience and multi-track delivery 94, English and cross-cultural 93 — I score these three at the top not because I think I am perfect, but because every point is backed by checkable hard facts: ranked 1st of 312, IELTS 7.5 plus a fully English working environment, and self-sourced accounts while working independently across Beijing, Shanghai, Hong Kong, Shenzhen and overseas. AI and tooling 70, Data analysis and judgement 65 — the methodology is still forming, so I score what is actually there. Technical depth only 48, because architecture selection, parameter configuration and troubleshooting all need real project hours to build: I can currently work at the level of business value and volume (how Token and GPU consumption is calculated), while the architecture layer still depends on architects. Each item carries its evidence and the improvement work in progress. In the matrix, the shade of each cell is how strongly that experience supports that capability: strong = quantified core results, medium = clear output, weak = touched on but not the main evidence, blank = no direct evidence, and I do not claim what I don't have."}
+];
+var SUGG=["How did the AIGC film project actually work?","What is your sales methodology?","Why only 48 for technical depth?","Why didn't you choose LBS by ranking?","What evidence do you have for resilience?","Why move from consulting to tech?","Where does your AI ability show?","How much did your content business make?","How do you actually work?","Non-985, humanities background — what is your edge?"];
+
+
+var curCap=null,curExp=null;
+function paint(el,mode){
+  el.className=el.className.replace(/ (on|off)/g,"")+(mode==="mid"?"":" "+mode);
+}
+function renderEvidence(){
+  var box=document.getElementById("evidence");
+  var head='<div class="eh">EVIDENCE · HARD FACTS</div>';
+  if(curCap){
+    box.innerHTML=head+'<ul>'+(EVID[curCap]||[]).map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul>';
+    return;
+  }
+  if(curExp){
+    var hits=[];
+    CAPS.forEach(function(c){if(REL[c.id].indexOf(curExp)>-1)hits.push(c.t)});
+    box.innerHTML=head+'<div style="font-size:13.5px;color:#2C3B52;line-height:1.85"><b>'+EXPNAME[curExp]+'</b> built the following capabilities: '+hits.join(" · ")+'. Click any capability on the left for the matching evidence.</div>';
+    return;
+  }
+  box.innerHTML=head+'<div class="empty">Select a capability or an experience, and its hard evidence appears here.</div>';
+}
+function drawCaps(){
+  var ce=document.getElementById("caps").children;
+  var xe=document.getElementById("exps").children;
+  if(!curCap&&!curExp){
+    for(var i=0;i<ce.length;i++)paint(ce[i],"mid");
+    for(var j=0;j<xe.length;j++)paint(xe[j],"mid");
+  }else if(curCap){
+    for(var a=0;a<CAPS.length;a++)paint(ce[a],CAPS[a].id===curCap?"on":"off");
+    for(var b=0;b<EXPS.length;b++)paint(xe[b],REL[curCap].indexOf(EXPS[b].id)>-1?"on":"off");
+  }else{
+    for(var c=0;c<CAPS.length;c++)paint(ce[c],REL[CAPS[c].id].indexOf(curExp)>-1?"on":"off");
+    for(var d=0;d<EXPS.length;d++)paint(xe[d],EXPS[d].id===curExp?"on":"off");
+  }
+  renderEvidence();
+  updateRadar(curCap);
+  renderCapSide(curCap);
+  updateMatrixSel(curCap,curExp);
+}
+/* ---------- Capability radar ---------- */
+var RCX=260,RCY=178,RR=120,animV=[];
+function rang(i){return -Math.PI/2+i*Math.PI/3;}
+function rpt(i,v){var a=rang(i),r=RR*v/100;return [RCX+Math.cos(a)*r,RCY+Math.sin(a)*r];}
+function rpoly(vs){var o=[];for(var i=0;i<vs.length;i++){var p=rpt(i,vs[i]);o.push(p[0].toFixed(1)+","+p[1].toFixed(1));}return o.join(" ");}
+function radAnchor(i){var c=Math.cos(rang(i));return c>0.3?"start":(c<-0.3?"end":"middle");}
+(function buildRadar(){
+  var svg=document.getElementById("radar");
+  if(!svg)return;
+  var g="";
+  RADAR.forEach(function(r){animV.push(0);});
+  [25,50,75,100].forEach(function(v){
+    g+='<polygon points="'+rpoly([v,v,v,v,v,v])+'" fill="none" stroke="#E4ECF6" stroke-width="1"/>';
+  });
+  RADAR.forEach(function(r,i){
+    var p=rpt(i,100);
+    g+='<line id="raxis'+i+'" x1="'+RCX+'" y1="'+RCY+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'" stroke="#E1E9F4" stroke-width="1"/>';
+  });
+  g+='<polygon id="rpoly" points="'+rpoly(animV)+'" fill="rgba(18,58,99,.13)" stroke="#123A63" stroke-width="2"/>';
+  RADAR.forEach(function(r,i){
+    var p=rpt(i,r.now),a=rang(i);
+    var lx=RCX+Math.cos(a)*(RR+34),ly=RCY+Math.sin(a)*(RR+34);
+    var dy=Math.sin(a)>0.5?11:(Math.sin(a)<-0.5?-3:4);
+    g+='<circle id="rdot'+i+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4" fill="#fff" stroke="#123A63" stroke-width="2"/>';
+    g+='<text id="rval'+i+'" class="axval" text-anchor="'+radAnchor(i)+'"></text>';
+    g+='<text id="rlabel'+i+'" class="axlabel" data-cap="'+r.id+'" x="'+lx.toFixed(1)+'" y="'+(ly+dy).toFixed(1)+'" text-anchor="'+radAnchor(i)+'">'+CAPNAME[r.id]+'</text>';
+    g+='<circle class="axhit" data-cap="'+r.id+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="22"/>';
+  });
+  svg.innerHTML=g;
+  svg.addEventListener("click",function(e){
+    var id=e.target.getAttribute?e.target.getAttribute("data-cap"):null;
+    if(!id)return;
+    curCap=(curCap===id?null:id);curExp=null;drawCaps();
+  });
+  paintRadar();
+  function runAnim(){
+    var t0=null,dur=950;
+    function step(ts){
+      if(t0===null)t0=ts;
+      var k=Math.min(1,(ts-t0)/dur);k=1-Math.pow(1-k,3);
+      RADAR.forEach(function(r,i){animV[i]=r.now*k;});
+      paintRadar();
+      if(k<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if(window.IntersectionObserver){
+    var io=new IntersectionObserver(function(es){
+      for(var i=0;i<es.length;i++){if(es[i].isIntersecting){runAnim();io.disconnect();}}
+    },{threshold:.15});
+    io.observe(svg);
+  }else{runAnim();}
+})();
+function paintRadar(){
+  var poly=document.getElementById("rpoly");
+  if(!poly)return;
+  poly.setAttribute("points",rpoly(animV));
+  RADAR.forEach(function(r,i){
+    var d=document.getElementById("rdot"+i),t=document.getElementById("rval"+i);
+    if(!d||!t)return;
+    var p=rpt(i,animV[i]),a=rang(i),ri=RR*animV[i]/100-21;
+    d.setAttribute("cx",p[0].toFixed(1));d.setAttribute("cy",p[1].toFixed(1));
+    t.setAttribute("x",(RCX+Math.cos(a)*ri).toFixed(1));
+    t.setAttribute("y",(RCY+Math.sin(a)*ri+3.5).toFixed(1));
+    t.textContent=Math.round(animV[i]);
+  });
+}
+function updateRadar(id){
+  RADAR.forEach(function(r,i){
+    var l=document.getElementById("rlabel"+i),v=document.getElementById("rval"+i),
+        d=document.getElementById("rdot"+i),ax=document.getElementById("raxis"+i),on=(id===r.id);
+    if(l)l.setAttribute("class","axlabel"+(on?" on":""));
+    if(v)v.setAttribute("class","axval"+(on?" on":""));
+    if(d){d.setAttribute("r",on?5.5:4);d.setAttribute("stroke",on?"#C9A961":"#123A63");}
+    if(ax)ax.setAttribute("stroke",on?"#E7D6A8":"#E1E9F4");
+  });
+}
+function renderCapSide(id){
+  var box=document.getElementById("capside");
+  if(!box)return;
+  if(!id){
+    var an=0;
+    RADAR.forEach(function(r){an+=r.now;});
+    an=Math.round(an/RADAR.length);
+    var list="";
+    RADAR.slice().sort(function(a,b){return b.now-a.now;}).forEach(function(r){
+      list+='<div><span>'+r.now+'</span>'+CAPNAME[r.id]+'</div>';
+    });
+    box.innerHTML='<div class="cside-sh">CAPABILITY RADAR</div>'+
+      '<h4>Six Capabilities</h4><div class="cen">Self-assessment · 0–100</div>'+
+      '<div class="csc"><div><span class="n">'+an+'</span><span class="l">Average of six</span></div></div>'+
+      '<div class="cdef">The scores are self-assessed, and every one has a checkable fact behind it.</div>'+
+      '<div class="clist">'+list+'</div>'+
+      '<div class="chint">Click any vertex to see the evidence and what I am doing to improve.</div>';
+    return;
+  }
+  var r=RADMAP[id],c=null,best=MXCOLS[0];
+  CAPS.forEach(function(x){if(x.id===id)c=x;});
+  MXCOLS.forEach(function(e){if((MATRIX[id][e.id]||0)>(MATRIX[id][best.id]||0))best=e;});
+  box.innerHTML='<div class="cside-sh">CAPABILITY · '+c.e+'</div>'+
+    '<h4>'+c.t+'</h4><div class="cen">'+c.e+'</div>'+
+    '<div class="csc"><div><span class="n">'+r.now+'</span><span class="l">Self-assessed · 0–100</span></div></div>'+
+    '<div class="cdef">'+CAPDEF[id]+'</div>'+
+    '<div class="cev"><b>Strongest support · '+EXPNAME[best.id]+': </b>'+(MNOTE[id+"|"+best.id]||"")+'</div>'+
+    '<div class="cev"><b>Evidence · '+(EVID[id]||[]).length+' hard facts: </b>'+(EVID[id]||[]).join("; ")+'.</div>'+
+    (GAP[id]?'<div class="cgap"><b>Why only '+r.now+': </b>'+GAP[id]+'</div>':'')+
+    '<div class="cup"><b>What I am doing about it: </b>'+UPLIFT[id]+'</div>';
+}
+(function buildMatrix(){
+  var tb=document.getElementById("mxtable");
+  if(!tb)return;
+  var h='<tr><th class="rh"></th>';
+  MXCOLS.forEach(function(e){h+='<th>'+e.s+'</th>';});
+  var rows="";
+  CAPS.forEach(function(c){
+    rows+='<tr><th class="rh">'+c.t+'</th>';
+    MXCOLS.forEach(function(e){
+      var lv=MATRIX[c.id][e.id]||0;
+      rows+='<td class="l'+lv+'" data-cap="'+c.id+'" data-exp="'+e.id+'">'+(lv===3?"Strong":(lv===2?"Medium":(lv===1?"Weak":"·")))+'</td>';
+    });
+    rows+='</tr>';
+  });
+  tb.innerHTML='<thead>'+h+'</tr></thead><tbody>'+rows+'</tbody>';
+  var tip=document.getElementById("mxtip"),def=tip.innerHTML;
+  var cells=tb.querySelectorAll("td");
+  for(var i=0;i<cells.length;i++){
+    (function(td){
+      var cap=td.getAttribute("data-cap"),exp=td.getAttribute("data-exp"),lv=MATRIX[cap][exp]||0;
+      td.onmouseenter=function(){
+        var nm=lv===3?"Strong":(lv===2?"Medium":(lv===1?"Weak":"No direct evidence"));
+        tip.innerHTML='<b>'+CAPNAME[cap]+' × '+EXPNAME[exp]+'</b> · '+nm+'<br>'+
+          (MNOTE[cap+"|"+exp]||"This experience offers no direct evidence for this capability, so I will not claim it.")+
+          '<span class="em">Click the cell: select that capability and expand this experience.</span>';
+      };
+      td.onmouseleave=function(){tip.innerHTML=def;};
+      td.onclick=function(){curCap=cap;curExp=null;drawCaps();openTL(exp);};
+    })(cells[i]);
+  }
+})();
+function updateMatrixSel(cap,exp){
+  var tb=document.getElementById("mxtable");
+  if(!tb)return;
+  var cells=tb.querySelectorAll("td");
+  for(var i=0;i<cells.length;i++){
+    var td=cells[i],c=td.getAttribute("data-cap"),e=td.getAttribute("data-exp");
+    var on=((cap&&c===cap)||(exp&&e===exp));
+    td.className="l"+(MATRIX[c][e]||0)+(on?" sel":"");
+  }
+}
+
+(function buildCaps(){
+  var cb=document.getElementById("caps"),eb=document.getElementById("exps");
+  CAPS.forEach(function(c){
+    var d=document.createElement("div");
+    d.className="capitem";
+    d.innerHTML='<div class="t">'+c.t+'</div><div class="e">'+c.e+'</div>';
+    d.onclick=function(){curCap=(curCap===c.id?null:c.id);if(curCap)curExp=null;drawCaps();};
+    cb.appendChild(d);
+  });
+  EXPS.forEach(function(e){
+    var d=document.createElement("div");
+    d.className="expcard";
+    d.innerHTML='<div class="lg'+(e.lg==="md"?" lgmd":"")+'">'+LOGOS[e.lg]+'</div><div><div class="t">'+e.t+'</div><div class="d">'+e.d+'</div></div>';
+    d.onclick=function(){curExp=(curExp===e.id?null:e.id);if(curExp)curCap=null;drawCaps();};
+    eb.appendChild(d);
+  });
+})();
+
+(function buildTL(){
+  var pro=document.getElementById("tlpro"),edu=document.getElementById("tledu");
+  var eduList=TL.filter(function(x){return x.grp==="edu";});
+  var list=TL.filter(function(x){return x.grp!=="edu";}).concat(eduList);
+  list.forEach(function(it){
+    var tl=(it.grp==="edu")?edu:pro;
+    var w=document.createElement("div");
+    w.className="tlitem"+(it.hl?" hl":"");
+    var mini=it.mini.map(function(m){return "<div><b>"+m[0]+"</b><span>"+m[1]+"</span></div>"}).join("");
+    var kpi=it.kpi.map(function(k){return "<div><b>"+k[0]+"</b>"+k[1]+"</div>"}).join("");
+    var sar=it.sar.map(function(s){return '<div class="k">'+s[0]+'</div><div class="v">'+s[1]+'</div>'}).join("");
+    var ac=(ACCENT[it.lg]||["#1B3A6B","#F2F5FA"]);
+    var shots=(it.shots&&it.shots.length)?('<div class="shots" style="--ac:'+ac[0]+';--act:'+ac[1]+'">'+it.shots.map(function(s){return '<figure><img src="assets/xhs/'+s[0]+'" loading="lazy" alt="'+s[1]+'" data-cap="'+s[1]+'"><figcaption>'+s[1]+'</figcaption></figure>'}).join("")+'</div>'):"";
+    var live=(it.live&&it.live.length)?('<div class="livestrip">'+it.live.map(function(s){return '<img src="assets/xhs/'+s[0]+'" loading="lazy" data-cap="'+s[1]+'" title="'+s[1]+'">'}).join("")+'</div>'):"";
+    w.innerHTML='<div class="tlhead'+(it.hl?" casehl":"")+'">'+
+      '<div class="lgwrap"><div class="lg'+(it.lg==="md"?" lgmd":"")+'">'+LOGOS[it.lg]+'</div>'+(it.lg==="md"?'<div class="lgcap">RED profile · Capybara</div>':"")+live+'</div>'+
+      '<div><div class="ttl">'+it.ttl+'</div><div class="meta">'+it.meta+'</div><div class="hook">'+it.hook+'</div></div>'+
+      '<div class="minik">'+mini+'</div><div class="arrow">&#9656;</div></div>'+
+      '<div class="tlbody"><div class="sar">'+sar+'</div><div class="kpi">'+kpi+'</div>'+shots+'</div>';
+    var h=w.querySelector(".tlhead"),b=w.querySelector(".tlbody");
+    h.onclick=function(){
+      var open=b.classList.contains("open");
+      b.classList.toggle("open");h.classList.toggle("open");
+      b.style.display=open?"none":"block";
+    };
+    w.dataset.tl=it.id;
+    tl.appendChild(w);
+  });
+})();
+(function(){
+  var lb=document.createElement("div");
+  lb.id="lbox";
+  lb.innerHTML='<img alt=""><div class="cap"></div>';
+  document.body.appendChild(lb);
+  document.addEventListener("click",function(e){
+    var t=e.target;
+    var inStrip=t.parentElement&&t.parentElement.classList&&t.parentElement.classList.contains("livestrip");
+    var inShots=t.parentElement&&t.parentElement.tagName==="FIGURE"&&t.getAttribute("data-cap");
+    var isMdLogo=t.classList&&t.classList.contains("mdlogo");
+    if(t.tagName==="IMG"&&(inStrip||inShots||isMdLogo)){
+      lb.querySelector("img").src=t.src;
+      lb.querySelector(".cap").textContent=t.getAttribute("data-cap")||"";
+      lb.classList.add("on");
+      e.stopPropagation();
+      return;
+    }
+    if(lb.classList.contains("on")&&(t===lb||t.parentElement===lb)){lb.classList.remove("on");}
+  });
+})();
+function openTL(id){
+  var all=document.querySelectorAll(".tlitem");
+  for(var i=0;i<all.length;i++){
+    var b=all[i].querySelector(".tlbody"),h=all[i].querySelector(".tlhead");
+    if(all[i].dataset.tl===id){b.classList.add("open");h.classList.add("open");b.style.display="block";}
+    else{b.classList.remove("open");h.classList.remove("open");b.style.display="none";}
+  }
+}
+
+(function buildBars(){
+  var box=document.getElementById("bars");
+  function render(v){
+    box.innerHTML=VIEWS[v].map(function(r){
+      return '<div class="bar"><div>'+r[0]+'</div><div class="track"><div class="fill'+(v==="xhs"?"":" g")+'" style="width:'+r[2]+'%"></div></div><div class="val">'+r[1]+'</div></div>';
+    }).join("");
+  }
+  render("xhs");
+  var chips=document.querySelectorAll(".switch .chip");
+  for(var i=0;i<chips.length;i++){
+    chips[i].onclick=function(){
+      for(var j=0;j<chips.length;j++)chips[j].className="chip";
+      this.className="chip on";render(this.dataset.view);
+    };
+  }
+})();
+
+(function buildHighlights(){
+  var box=document.getElementById("hlgrid");
+  if(!box||!HIGHLIGHTS)return;
+  box.innerHTML=HIGHLIGHTS.map(function(h,i){
+    return '<div class="hlc"><div class="rk">'+(i+1)+'</div><div class="bd"><div class="tt">'+h.title+'</div>'+
+      '<div class="dt">'+h.date+'</div>'+
+      '<div class="nums"><span>Likes <b>'+h.like+'</b></span><span>Saves <b>'+h.collect+'</b></span><span>Comments <b>'+h.comment+'</b></span></div>'+
+      '<div class="why">'+h.why+'</div></div>'+
+      (h.img?'<div class="thumb"><img src="assets/xhs/'+h.img+'" loading="lazy" alt="'+h.title+'"></div>':'')+'</div>';
+  }).join("");
+})();
+
+(function buildVoices(){
+  var box=document.getElementById("voices");
+  if(!box||!VOICES)return;
+  box.innerHTML=VOICES.map(function(v){
+    return '<div class="voc"><div class="q">「'+v.quote+'」</div>'+
+      '<div class="cm">'+v.note+'</div>'+
+      '<div class="src">— from "'+v.from+'" · '+v.date+'</div></div>';
+  }).join("");
+})();
+
+(function buildAsk(){
+  var sb=document.getElementById("sugg");
+  SUGG.forEach(function(s){
+    var d=document.createElement("div");
+    d.className="chip";d.textContent=s;
+    d.onclick=function(){document.getElementById("q").value=s;ask();};
+    sb.appendChild(d);
+  });
+})();
+function ask(){
+  var raw=document.getElementById("q").value.trim();
+  var box=document.getElementById("answer");
+  if(!raw){box.style.display="none";return;}
+  var q=raw.toLowerCase();
+  var best=null,score=0,hits=0;
+  KB.forEach(function(r){
+    var s=0;
+    r.kw.forEach(function(k){if(q.indexOf(k)>-1)s+=k.length;});
+    if(s>0)hits++;
+    if(s>score){score=s;best=r;}
+  });
+  box.style.display="block";
+  if(best){
+    box.innerHTML=best.a+'<div class="src">Retrieved from a personal knowledge base · '+KB.length+' records · '+hits+' matched</div>';
+  }else{
+    box.innerHTML='That is outside what my knowledge base currently covers. Ask me directly: WeChat / phone 18988401676, or email zzyzzy921921@outlook.com.<div class="src">Knowledge base: '+KB.length+' records · no match · fallback path given</div>';
+  }
+}
+document.getElementById("q").addEventListener("keydown",function(e){if(e.key==="Enter")ask();});
+
+(function roles(){
+  var map={
+    hr:{hint:"Adjusted for a <b>recruiter</b>: leading with quantified results and capability evidence, and expanding my Tencent Cloud experience for you.",cap:"data",tl:"tc"},
+    panel:{hint:"Adjusted for a <b>panel judge</b>: leading with methodology and a full zero-to-one case, and expanding my Tencent Cloud experience (including the AIGC film case).",cap:"learn",tl:"tc"},
+    peer:{hint:"Adjusted for a <b>peer or friend</b>: leading with path choices and my content work, and expanding the venture experience.",cap:"ai",tl:"md"}
+  };
+  var chips=document.querySelectorAll(".rolebar .chip");
+  for(var i=0;i<chips.length;i++){
+    chips[i].onclick=function(){
+      for(var j=0;j<chips.length;j++)chips[j].className="chip";
+      this.className="chip on";
+      var m=map[this.dataset.role];
+      document.getElementById("rolehint").innerHTML=m.hint;
+      curCap=m.cap;curExp=null;drawCaps();openTL(m.tl);
+    };
+  }
+})();
+
+(function navspy(){
+  var links=document.querySelectorAll(".navlinks a");
+  var secs=["experience","capability","approach","media","overview","assistant","contact"];
+  window.addEventListener("scroll",function(){
+    var y=window.scrollY+140,cur="experience";
+    secs.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id;
+    });
+    for(var i=0;i<links.length;i++){
+      links[i].className=(links[i].getAttribute("href")==="#"+cur)?"nl on":"nl";
+    }
+  });
+})();
+drawCaps();
+openTL("tc");
+</script>
+</body>
+</html>
