@@ -25,6 +25,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .navlinks a{font-size:12.5px;color:var(--muted);text-decoration:none;letter-spacing:.05em;transition:color .2s;padding:3px 0;border-bottom:1px solid transparent}
 .navlinks a:hover{color:var(--navy)}
 .navlinks a.on{color:var(--navy);border-bottom-color:var(--gold)}
+.navlinks a.langbtn{border:1px solid var(--navy);border-bottom:1px solid var(--navy);padding:4px 14px;border-radius:999px;color:var(--navy);letter-spacing:.08em;margin-left:6px}
+.navlinks a.langbtn:hover{background:var(--navy);color:#fff}
 
 .hero{background:linear-gradient(155deg,#08203C 0%,#0E3560 55%,#134A80 100%);color:#fff;position:relative;overflow:hidden}
 .hero:after{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
@@ -200,7 +202,7 @@ section.tinted{background:var(--soft);border-top:1px solid var(--line);border-bo
 .casetag{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:#fff;background:var(--gold);padding:3px 9px;margin-left:10px;vertical-align:3px}
 .casehl{border:1px solid var(--gold);background:linear-gradient(180deg,#FFFDF7 0%,#FFFFFF 100%)}
 
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .step{border-top:3px solid var(--navy);background:var(--white);padding:22px 20px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .step .no{font-family:var(--serif);font-size:26px;color:#C8D6E8;line-height:1}
 .step h3{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--navy);margin:10px 0 4px}
@@ -316,7 +318,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <a href="#overview" class="nl">Profile</a>
     <a href="#assistant" class="nl">Ask AI</a>
     <a href="#contact" class="nl">Contact</a>
-    <a href="https://chaojixiaozhao.github.io/portfolio/" class="nl">中文</a>
+    <a href="https://chaojixiaozhao.github.io/portfolio/" class="nl langbtn">中文</a>
   </div>
 </div></nav>
 
@@ -402,28 +404,35 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <section id="approach"><div class="wrap">
   <div class="sechead"><span class="secnum">03</span><h2>How I Work</h2><span class="en">Approach</span></div>
-  <p class="secsub">A three-step way of working, where every step carries a real project I actually ran — not a methodology template, but the order in which I genuinely work.</p>
+  <p class="secsub">A four-step way of closing: Read the market → Validate with data → Reach and connect → Deliver value. Every step carries a real project I actually ran — not a methodology template, but the exact order in which I won the Tencent Cloud AIGC client.</p>
   <div class="steps">
     <div class="step">
       <div class="no">01</div>
-      <h3>Read the signal: form the hypothesis first</h3>
-      <div class="en">READ THE SIGNAL</div>
-      <p>Work backwards from policy, industry cycles and competitor moves to the pressure the client is bound to run into, and set the hypothesis before the client has noticed it themselves. A visit without a hypothesis is just a chat — it never surfaces the real need.</p>
-      <div class="eg"><b>Example:</b> New disclosure rules from China's three major exchanges → clients' ESG rating needs (EY: an 80-page service proposal plus three rounds of client visits); everyone chasing AI short dramas → I judged that feature-length AI film demands far more on quality and spend per project, so I targeted studios doing high-quality short dramas and AI films (Tencent Cloud).</div>
+      <h3>Read the market: find the structural opportunity</h3>
+      <div class="en">READ THE MARKET</div>
+      <p>Pick the track before picking the client. While everyone else was chasing AI short dramas, I looked at two dimensions — quality requirements and token spend per project — and judged that feature-length AI film demanded more of both, making it the better bet. I targeted studios producing high-quality short dramas and AI films in China ahead of the crowd.</p>
+      <div class="eg"><b>Example:</b> New disclosure rules from China's three major exchanges → clients' ESG rating needs (EY); rivals crowding into AI short dramas → I bet on AI feature films instead (Tencent Cloud).</div>
     </div>
     <div class="step">
       <div class="no">02</div>
-      <h3>Validate in the field: pressure-test the hypothesis</h3>
-      <div class="en">TEST ON SITE</div>
-      <p>A hypothesis is not a requirement. Use repeated research and visits until the client admits this is their problem; at the same time convert qualitative gut feel into quantitative terms — otherwise you can neither quote nor prioritise.</p>
-      <div class="eg"><b>Example:</b> The Greater Bay Area tourism client took four rounds of research before we locked onto QA and live streaming; the AIGC client had quietly plugged in cheaper overseas models, so price comparison was a losing game → I found the one problem only we could solve: unified billing across models.</div>
+      <h3>Validate with data: confirm the demand is real</h3>
+      <div class="en">VALIDATE WITH DATA</div>
+      <p>Once the logic held, I pressure-tested it with data. Cross-checking industry reports on AI film: production cost is less than half that of traditional filmmaking, token consumption is real and volume is large — a RMB 10M project burns roughly RMB 4M worth of tokens. That confirmed the direction was worth committing to.</p>
+      <div class="eg"><b>Example:</b> AI film production ≈ half the cost of traditional; per-project token consumption in the millions (Tencent Cloud AIGC).</div>
     </div>
     <div class="step">
       <div class="no">03</div>
-      <h3>Translate it into something buyable, then push it to real consumption</h3>
-      <div class="en">TRANSLATE &amp; CLOSE</div>
-      <p>Pin down technical requirements with architects and pre-sales, organise POCs and competitive benchmarks, choose the commercial path, then drive it all the way to actual consumption — and follow through on contract, settlement and invoicing.</p>
-      <div class="eg"><b>Example:</b> The AIGC film client completed Token Hub onboarding and moved into post-paid consumption; on the ByteDance Volcano Cloud migration, management accepted "optimise the existing estate first, discount second".</div>
+      <h3>Reach and connect: find the key people through every channel</h3>
+      <div class="en">REACH &amp; CONNECT</div>
+      <p>I traced finished films back to the studios behind them, leaned on my network for introductions, and built a client list to work through one by one. For priority accounts, I believe meeting in person works best — I found an AIGC film festival in Beijing with several target clients on the attendee list, signed up, met them at the gala dinner and exchanged contacts, then visited their offices on my own to verify the business was real.</p>
+      <div class="eg"><b>Example:</b> Met the founder at the Beijing AIGC film festival gala → independent on-site visit to verify → entered commercial discussions (Tencent Cloud).</div>
+    </div>
+    <div class="step">
+      <div class="no">04</div>
+      <h3>Deliver value: uncover the real need, then close</h3>
+      <div class="en">DELIVER VALUE &amp; CLOSE</div>
+      <p>The client had quietly plugged into many model channels (including overseas ones) at prices well below any cloud vendor — competing on price was hopeless. The break came from their IT director's pain point in performance management: no unified billing, so they could not measure artists by token consumption. Tencent's unified model platform detects consumption across all models — that single point won over the client's boss, and a projection of million-level annual spend brought in our internal leadership and architects. Deal closed.</p>
+      <div class="eg"><b>Example:</b> Unified cross-model billing → the only fix for their performance-management scenario; million-level spend projection won internal support (Tencent Cloud).</div>
     </div>
   </div>
 </div></section>
@@ -1093,6 +1102,7 @@ document.getElementById("q").addEventListener("keydown",function(e){if(e.key==="
       if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id;
     });
     for(var i=0;i<links.length;i++){
+      if(links[i].classList.contains("langbtn"))continue;
       links[i].className=(links[i].getAttribute("href")==="#"+cur)?"nl on":"nl";
     }
   });
